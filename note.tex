@@ -1,4 +1,6 @@
 \documentclass{article}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
 \title{Notes on ``Finite-Dimensional Vector Spaces''\\by Paul R. Halmos}
 \author{}
 \begin{document}
@@ -25,4 +27,19 @@ If $n$ is not given, we use $n = 1$ instead.
   \item[(f)]
   \item[(g)]
 \end{itemize}
+\section{Joh (2022/09/19)}
+\subsection{Exercise 1.2}
+\begin{itemize}
+  \item[(a)] The set of positive integers is not a field since there is no additive inverse for 1.
+  \item[(b)] The set of integers is not a field since there is no multiplicative inverse for 2.
+  \item[(c)] There exists a bijective map $\varphi$ from $\mathbb{N}$ (or $\mathbb{Z}$) to $\mathbb{Q}$ \cite{Q_countable}, where $\mathbb{Q}$ is a field \cite{Q_field}.
+  	We can make $\mathbb{N}$ a field by re-defining (i) addition by $a \oplus b = \varphi^{-1} (\varphi(a) + \varphi(b))$ and (ii) multiplication by $a \otimes b = \varphi^{-1}(\varphi(a)\varphi(b))$ for each $a, b \in \mathbb{N}$.
+	Note that the additive and multiplicative identities become $\varphi^{-1}(0)$ and $\varphi^{-1}(1)$, respectively.
+	For each $\alpha\in\mathbb{N}$, the additive inverse becomes $\varphi^{-1}(-\varphi(\alpha))$, and the multiplicative inverse becomes $\varphi^{-1}(1/\varphi(\alpha))$ if $\alpha\ne\varphi^{-1}(0)$.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{Q_countable} \url{https://proofwiki.org/wiki/Rational_Numbers_are_Countably_Infinite}
+\bibitem{Q_field} \url{https://proofwiki.org/wiki/Rational_Numbers_form_Field}
+\end{thebibliography}
 \end{document}
