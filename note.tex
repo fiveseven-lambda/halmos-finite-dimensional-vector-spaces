@@ -20,12 +20,59 @@ If $n$ is not given, we use $n = 1$ instead.
 \section{Mohehe}
 \subsection{Exercise 1.1}
 \begin{itemize}
-  \item[(b)]Since addition is commutative, $\alpha+\beta+(-\alpha)=\beta+\alpha+(-\alpha)$.
-  \item[(c)]
+  \item[(b)]Since addition is commutative, $(\alpha + \beta) + (-\alpha) = (\beta + \alpha) + (-\alpha)$ holds.
+    We have $(\beta + \alpha) + (-\alpha) = \beta + (\alpha + (-\alpha))$ because addition is associative.
+    We obtain $\beta + (\alpha + (-\alpha)) = \beta + 0$ by definition.
+    We also have $\beta + 0 = \beta$ because of definition,
+    hence $(\alpha + \beta) + (-\alpha) = \beta$.
+    Since addition is commutative, $(\alpha + \gamma) + (-\alpha) = (\gamma + \alpha) + (-\alpha)$ holds.
+    We have $(\gamma + \alpha) + (-\alpha) = \gamma + (\alpha + (-\alpha))$ because addition is associative.
+    We obtain $\gamma + (\alpha + (-\alpha)) = \gamma + 0$ by definition.
+    We also have $\gamma + 0 = \gamma$ because of definition,
+    thus $(\alpha + \gamma) + (-\alpha) = \gamma$.
+    In addition, we have $(\alpha + \beta) + (-\alpha) = (\alpha + \gamma) + (-\alpha)$,
+    therefore $\beta = \gamma$.
+  \item[(c)]We obtain $\alpha + (\beta - \alpha) = \alpha + (\beta + (-\alpha))$ because of the sentence in the problems.
+    Since addition is commutative, $\alpha + (\beta + (-\alpha)) = (\beta + (-\alpha)) + \alpha$ holds.
+    We have $(\beta + (-\alpha)) + \alpha = \beta + ((-\alpha) + \alpha)$ because addition is associative.
+    We obtain $\beta + ((-\alpha) + \alpha) = \beta + (\alpha + (-\alpha))$ because addition is commutive.
+    In additon, the definition leads $\beta + (\alpha + (-\alpha)) = \beta + 0$.
+    We also have $\beta + 0 = \beta$,
+    hence $\alpha + (\beta - \alpha) = \beta$.
   \item[(d)]
-  \item[(e)]
-  \item[(f)]
-  \item[(g)]
+    We have $\alpha\cdot(\beta + (-\beta)) = \alpha\cdot0$ by the definition of addition.
+    We obtain $\alpha\cdot0 = 0\cdot\alpha$ because multipulication is commutative.
+    The definition of multiplication leads $\alpha\cdot(\beta + (-\beta)) = \alpha\beta + \alpha(-\beta)$.
+    Since multiplication is commutative, $\alpha\beta + \alpha(-\beta) = \beta\alpha + (-\beta)\alpha$.
+    We obtain $\beta\alpha + (-\beta)\alpha = \beta\alpha + (-1)\beta\alpha$ by exercises1.(e)
+    We also have $\beta\alpha + (-1)\beta\alpha = \beta\alpha + (-1)(\beta\alpha)$ because multiplication is associative.
+    Exercises1.(e) leads $\beta\alpha + (-1)(\beta\alpha) = \beta\alpha + (-\beta\alpha)$.
+    We have $\beta\alpha + (-\beta\alpha) = 0$ by the definition of addition,
+    hence $\alpha\cdot0 = 0\cdot\alpha = 0$ holds.
+  \item[(e)]We have $(-1)\alpha = -(1\alpha)$ because multiplication is associative.
+    We also obtain $-(1\alpha) = -(\alpha1)$ because multiplication is associative.
+    The definition of multiplication leads $-(\alpha1) = -\alpha$,
+    thus $(-1)\alpha = -\alpha$
+  \item[(f)]We have $(-\alpha)(-\beta) = ((-1)(\alpha))(-1)(\beta)$ by exercise.1(e)
+    We obtain $((-1)(\alpha))(-1)(\beta) = ((\alpha)(-1))(-1)(\beta)$ because multiplication is commutative.
+    We have $((\alpha)(-1))(-1)(\beta) = (\alpha)((-1)(-1))(\beta)$ because multiplication is associative.
+    We obtain $(\alpha)((-1)(-1))(\beta) = (\alpha)((-1)(-1)^{-1})(\beta)$ because $-1 = (-1)^{-1}$
+    We have $(\alpha)((-1)(-1)^{-1})(\beta) = (\alpha1)(\beta)$ by the definition of multiplication.
+    We obtain $(\alpha1)(\beta) = \alpha\beta$ by the definition of multiplication,
+    thus, $(-\alpha)(-\beta) = \alpha\beta$.
+  \item[(g)]If $\beta \neq 0$, we have $(\alpha\beta)\beta^{-1}=\alpha(\beta\beta^{-1})$ because multiplication is associative.
+    We obtain $\alpha(\beta\beta^{-1}) = \alpha1$ by the definition of multiplication.
+    We have $\alpha1 = \alpha$ by the definition of multiplication.
+    We obtain $0\cdot\beta^{-1} = 0$ by exercises1(d).
+    thus if $\beta \neq 0$, $\alpha = 0$.
+    If $\alpha \neq 0$, we have $(\alpha\beta)\alpha^{-1} = (\beta\alpha)\alpha^{-1}$ because multiplication is commutative.
+    We obtain $(\beta\alpha)\alpha^{-1} = \beta(\alpha\alpha^{-1})$ because multiplication is associative.
+    We have $\beta(\alpha\alpha^{-1}) = \beta1$  by the definition of multiplication.
+    We have $\beta1 = \beta$ by the definition of multiplication.
+    We obtain $0\cdot\beta^{-1} = 0$ by exercises1(d).
+    thus if $\alpha \neq 0$, $\beta = 0$.
+    If $\alpha = 0$ and $\beta = 0$, $\alpha\beta = 0$ by exercise1.(d)
+    Therefore, If $\alpha\beta = 0$, then either $\alpha = 0$ or $\beta = 0$ (or both)
 \end{itemize}
 \section{Joh (2022/09/19)}
 \subsection{Exercise 1.2}
