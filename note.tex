@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{amsmath,amssymb}
 \usepackage{hyperref}
+\usepackage{color}
 \title{Notes on ``Finite-Dimensional Vector Spaces''\\by Paul R. Halmos}
 \author{}
 \begin{document}
@@ -32,6 +33,10 @@ If $n$ is not given, we use $n = 1$ instead.
     thus $(\alpha + \gamma) + (-\alpha) = \gamma$.
     In addition, we have $(\alpha + \beta) + (-\alpha) = (\alpha + \gamma) + (-\alpha)$,
     therefore $\beta = \gamma$.
+    
+    {\color{red}
+      If $\alpha + \beta = \alpha + \gamma$, we have $\beta = \beta + 0 = 0 + \beta = (\alpha + (-\alpha)) + \beta = (-\alpha + \alpha) + \beta = -\alpha + (\alpha + \beta) = -\alpha + (\alpha + \gamma) = (-\alpha + \alpha) + \gamma = (\alpha + (-\alpha)) + \gamma = 0 + \gamma = \gamma + 0 = \gamma$ by definition.
+    }
   \item[(c)]We obtain $\alpha + (\beta - \alpha) = \alpha + (\beta + (-\alpha))$ because of the sentence in the problems.
     Since addition is commutative, $\alpha + (\beta + (-\alpha)) = (\beta + (-\alpha)) + \alpha$ holds.
     We have $(\beta + (-\alpha)) + \alpha = \beta + ((-\alpha) + \alpha)$ because addition is associative.
@@ -39,6 +44,11 @@ If $n$ is not given, we use $n = 1$ instead.
     In additon, the definition leads $\beta + (\alpha + (-\alpha)) = \beta + 0$.
     We also have $\beta + 0 = \beta$,
     hence $\alpha + (\beta - \alpha) = \beta$.
+    
+    {\color{red}
+      We have $\alpha + (\beta - \alpha) = (\beta - \alpha) + \alpha = \beta + (-\alpha + \alpha) = \beta + (\alpha - \alpha) = \beta + 0 = \beta$ by definition.
+    }
+    
   \item[(d)]
     We have $\alpha\cdot(\beta + (-\beta)) = \alpha\cdot0$ by the definition of addition.
     We obtain $\alpha\cdot0 = 0\cdot\alpha$ because multipulication is commutative.
@@ -49,11 +59,22 @@ If $n$ is not given, we use $n = 1$ instead.
     Exercises1.(e) leads $\beta\alpha + (-1)(\beta\alpha) = \beta\alpha + (-\beta\alpha)$.
     We have $\beta\alpha + (-\beta\alpha) = 0$ by the definition of addition,
     hence $\alpha\cdot0 = 0\cdot\alpha = 0$ holds.
+    
+    {\color{red}
+      We have $\alpha 0 + \alpha 0 = \alpha (0 + 0) = \alpha 0 = \alpha 0 + 0$ by definition, hence $\alpha 0 = 0$ by Exercise 1(b).
+      Note that $0 \alpha = \alpha 0$ by definition.
+    }
+    
   \item[(e)]We have $(-1)\alpha = (-\alpha\alpha^{-1})\alpha$ by the definition of multiplication.
     Since multiplication is associative, $(-\alpha\alpha^{-1})\alpha = (-\alpha)(\alpha^{-1}\alpha)$.
     We obtain $(-\alpha)(\alpha^{-1}\alpha) = (-\alpha)1$ by the definition of multiplication.
     We also have $(-\alpha)1 = -\alpha$ by the definition of multiplication, 
     thus $(-1)\alpha = -\alpha$ holds.
+    
+    {\color{red}
+      We have $(-1)\alpha + \alpha = (-1)\alpha + 1\alpha = (-1 + 1)\alpha = (1 - 1)\alpha = 0\alpha = 0$ by definition and Exercise 1(d).
+    }
+    
   \item[(f)]We have $(-\alpha)(-\beta) = ((-1)(\alpha))(-1)(\beta)$ by exercise.1(e)
     We obtain $((-1)(\alpha))(-1)(\beta) = ((\alpha)(-1))(-1)(\beta)$ because multiplication is commutative.
     We have $((\alpha)(-1))(-1)(\beta) = (\alpha)((-1)(-1))(\beta)$ because multiplication is associative.
@@ -61,6 +82,7 @@ If $n$ is not given, we use $n = 1$ instead.
     We have $(\alpha)((-1)(-1)^{-1})(\beta) = (\alpha1)(\beta)$ by the definition of multiplication.
     We obtain $(\alpha1)(\beta) = \alpha\beta$ by the definition of multiplication,
     thus, $(-\alpha)(-\beta) = \alpha\beta$.
+    
   \item[(g)]If $\beta \neq 0$, we have $(\alpha\beta)\beta^{-1}=\alpha(\beta\beta^{-1})$ because multiplication is associative.
     We obtain $\alpha(\beta\beta^{-1}) = \alpha1$ by the definition of multiplication.
     We have $\alpha1 = \alpha$ by the definition of multiplication.
