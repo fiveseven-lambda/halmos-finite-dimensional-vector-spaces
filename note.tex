@@ -97,12 +97,15 @@ If $n$ is not given, we use $n = 1$ instead.
     Therefore, If $\alpha\beta = 0$, then either $\alpha = 0$ or $\beta = 0$ (or both)
 
     (Another way)
-    By contraposition, "If $\alpha\beta = 0$, then either $\alpha = 0$ or $\beta = 0$ (or both)." is equivalent to prove "If both of $\alpha$ and $\beta$ are not zero, $\alpha\beta \neq 0$ holds."
-    Suppose $\alpha$ and $\beta$ are not zero.
-    We have $0 = \alpha0$ by exercise 1.(d)
-    In addition, $\alpha0 \neq \alpha\beta$ holds because of $\beta \neq 0$.
-    Therefore, if both of $\alpha$ and $\beta$ are not zero, $\alpha\beta \neq 0$ holds.
-    Thus, if $\alpha\beta = 0$, then either $\alpha = 0$ or $\beta = 0$ (or both), by proof of contrapositive.
+    If $\alpha\beta = 0$,
+    suppose $\alpha \neq 0$ and $\beta \neq 0$ hold.
+    Because of it, there exists $\alpha^{-1}$.
+    We have $0 = \alpha^{-1}0$ by definition.
+    $\alpha^{-1}0 = \alpha^{-1}\alpha\beta$ holds by supposition.
+    We obtain $\alpha^{-1}\alpha\beta = \alpha\alpha^{-1}\beta = 1\beta = \beta1 = \beta$,
+    hence $\beta = 0$.
+    However, this result contradicts supposition, "$\alpha \neq 0$ and $\beta \neq 0$".
+    Therefore, if $\alpha\beta = 0$, then either $\alpha = 0$ or $\beta = 0$ (or both).
     
 \end{itemize}
 \section{Joh (2022/09/19)}
