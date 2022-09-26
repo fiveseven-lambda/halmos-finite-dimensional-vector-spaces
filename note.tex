@@ -21,89 +21,43 @@ If $n$ is not given, we use $n = 1$ instead.
 \section{Mohehe}
 \subsection{Exercise 1.1}
 \begin{itemize}
-  \item[(b)]Since addition is commutative, $(\alpha + \beta) + (-\alpha) = (\beta + \alpha) + (-\alpha)$ holds.
-    We have $(\beta + \alpha) + (-\alpha) = \beta + (\alpha + (-\alpha))$ because addition is associative.
-    We obtain $\beta + (\alpha + (-\alpha)) = \beta + 0$ by definition.
-    We also have $\beta + 0 = \beta$ because of definition,
-    hence $(\alpha + \beta) + (-\alpha) = \beta$.
-    Since addition is commutative, $(\alpha + \gamma) + (-\alpha) = (\gamma + \alpha) + (-\alpha)$ holds.
-    We have $(\gamma + \alpha) + (-\alpha) = \gamma + (\alpha + (-\alpha))$ because addition is associative.
-    We obtain $\gamma + (\alpha + (-\alpha)) = \gamma + 0$ by definition.
-    We also have $\gamma + 0 = \gamma$ because of definition,
-    thus $(\alpha + \gamma) + (-\alpha) = \gamma$.
-    In addition, we have $(\alpha + \beta) + (-\alpha) = (\alpha + \gamma) + (-\alpha)$,
-    therefore $\beta = \gamma$.
+  \item[(b)]We have $(\alpha + \beta) + (-\alpha) = (\beta + \alpha) + (-\alpha) = \beta + (\alpha + (-\alpha)) = \beta + 0 = \beta$ by definition.
+    We also have $(\alpha + \beta) + (-\alpha) = (\alpha + \gamma) + (-\alpha) = (\gamma + \alpha) + (-\alpha) = \gamma + (\alpha + (-\alpha)) = \gamma + 0 = \gamma$ by definition.
+    Therefore, $\beta = \gamma$ holds. 
     
     {\color{red}
       If $\alpha + \beta = \alpha + \gamma$, we have $\beta = \beta + 0 = 0 + \beta = (\alpha + (-\alpha)) + \beta = (-\alpha + \alpha) + \beta = -\alpha + (\alpha + \beta) = -\alpha + (\alpha + \gamma) = (-\alpha + \alpha) + \gamma = (\alpha + (-\alpha)) + \gamma = 0 + \gamma = \gamma + 0 = \gamma$ by definition.
     }
-  \item[(c)]We obtain $\alpha + (\beta - \alpha) = \alpha + (\beta + (-\alpha))$ because of the sentence in the problems.
-    Since addition is commutative, $\alpha + (\beta + (-\alpha)) = (\beta + (-\alpha)) + \alpha$ holds.
-    We have $(\beta + (-\alpha)) + \alpha = \beta + ((-\alpha) + \alpha)$ because addition is associative.
-    We obtain $\beta + ((-\alpha) + \alpha) = \beta + (\alpha + (-\alpha))$ because addition is commutive.
-    In additon, the definition leads $\beta + (\alpha + (-\alpha)) = \beta + 0$.
-    We also have $\beta + 0 = \beta$,
-    hence $\alpha + (\beta - \alpha) = \beta$.
+
+  \item[(c)]We have $\alpha + (\beta - \alpha) = \alpha + (\beta + (-\alpha)) = \alpha + ((-\alpha) + \beta) = (\alpha + (-\alpha)) + \beta = 0 + \beta = \beta + 0 = \beta$ by definition.
     
     {\color{red}
       We have $\alpha + (\beta - \alpha) = (\beta - \alpha) + \alpha = \beta + (-\alpha + \alpha) = \beta + (\alpha - \alpha) = \beta + 0 = \beta$ by definition.
     }
     
-  \item[(d)]
-    We have $\alpha\cdot(\beta + (-\beta)) = \alpha\cdot0$ by the definition of addition.
-    We obtain $\alpha\cdot0 = 0\cdot\alpha$ because multipulication is commutative.
-    The definition of multiplication leads $\alpha\cdot(\beta + (-\beta)) = \alpha\beta + \alpha(-\beta)$.
-    Since multiplication is commutative, $\alpha\beta + \alpha(-\beta) = \beta\alpha + (-\beta)\alpha$.
-    We obtain $\beta\alpha + (-\beta)\alpha = \beta\alpha + (-1)\beta\alpha$ by exercises1.(e)
-    We also have $\beta\alpha + (-1)\beta\alpha = \beta\alpha + (-1)(\beta\alpha)$ because multiplication is associative.
-    Exercises1.(e) leads $\beta\alpha + (-1)(\beta\alpha) = \beta\alpha + (-\beta\alpha)$.
-    We have $\beta\alpha + (-\beta\alpha) = 0$ by the definition of addition,
-    hence $\alpha\cdot0 = 0\cdot\alpha = 0$ holds.
+  \item[(d)]We have $0\cdot\alpha = \alpha\cdot0 = \alpha(1 + (-1)) = \alpha1 + \alpha(-1) = \alpha + (-1)\alpha = \alpha + (-\alpha) = 0$ by definition and Exercise 1(e),
+    hence $\alpha\cdot0 = 0\cdot\alpha = 0$.
     
     {\color{red}
       We have $\alpha 0 + \alpha 0 = \alpha (0 + 0) = \alpha 0 = \alpha 0 + 0$ by definition, hence $\alpha 0 = 0$ by Exercise 1(b).
       Note that $0 \alpha = \alpha 0$ by definition.
     }
     
-  \item[(e)]We have $(-1)\alpha = (-\alpha\alpha^{-1})\alpha$ by the definition of multiplication.
-    Since multiplication is associative, $(-\alpha\alpha^{-1})\alpha = (-\alpha)(\alpha^{-1}\alpha)$.
-    We obtain $(-\alpha)(\alpha^{-1}\alpha) = (-\alpha)1$ by the definition of multiplication.
-    We also have $(-\alpha)1 = -\alpha$ by the definition of multiplication, 
-    thus $(-1)\alpha = -\alpha$ holds.
+  \item[(e)]
     
     {\color{red}
       We have $\alpha + (-1)\alpha = 1\alpha + (-1)\alpha = (1 + (-1))\alpha = 0\alpha = 0$ by definition and Exercise 1(d).
       Since the additive inverse is unique, we obtain $(-1)\alpha = -\alpha$.
     }
     
-  \item[(f)]We have $(-\alpha)(-\beta) = ((-1)(\alpha))((-1)(\beta))$ by exercise.1(e)
-    We obtain $((-1)(\alpha))((-1)(\beta)) = ((\alpha)(-1))((-1)(\beta)) = \alpha((-1)((-1)\beta)) = \alpha((-1)(-1)\beta)$ by definition.
-    We also have $(-1)(-1) + (1 + (-1)) = (-1)(-1) + ((-1) + 1) = (-1)(-1) + (-1) + 1 = (-1)(-1) + (-1)1 + 1 = (-1)(-1 + 1) + 1 = (-1)(1 + (-1)) + 1 = (-1)0 + 1 = 0 + 1 = 1 + 0 = 1$ by definition,
-    thus, $\alpha((-1)(-1)\beta) = \alpha(1\beta)$ holds.
-    $\alpha(1\beta) = \alpha(\beta1) = \alpha\beta$ by definition.
+  \item[(f)]We have $(-\alpha)(-\beta) = ((-1)\alpha)((-1)\beta) = (\alpha(-1))((-1)\beta) = \alpha((-1)((-1)\beta)) = \alpha((-1)(-1)\beta)$ by Exercise 1(e) and definition.
+    We also have $(-1)(-1) = 0 + (-1)(-1) = (1 + (-1)) + (-1)(-1) = 1 + (-1) + (-1)(-1) = 1 + (-1)((-1) + 1) = 1 + (-1)(1 + (-1)) = 1 + (-1)0 = 1 + 0 = 1$ by definition.
+    By it and definition, $\alpha((-1)(-1)\beta) = \alpha(1\beta) = \alpha(\beta1) = \alpha\beta$ holds.
     Therefore, $(-\alpha)(-\beta) = \alpha\beta$ holds.
     
-  \item[(g)]If $\beta \neq 0$, we have $(\alpha\beta)\beta^{-1}=\alpha(\beta\beta^{-1})$ because multiplication is associative.
-    We obtain $\alpha(\beta\beta^{-1}) = \alpha1$ by the definition of multiplication.
-    We have $\alpha1 = \alpha$ by the definition of multiplication.
-    We obtain $0\cdot\beta^{-1} = 0$ by exercises1(d).
-    thus if $\beta \neq 0$, $\alpha = 0$.
-    If $\alpha \neq 0$, we have $(\alpha\beta)\alpha^{-1} = (\beta\alpha)\alpha^{-1}$ because multiplication is commutative.
-    We obtain $(\beta\alpha)\alpha^{-1} = \beta(\alpha\alpha^{-1})$ because multiplication is associative.
-    We have $\beta(\alpha\alpha^{-1}) = \beta1$  by the definition of multiplication.
-    We have $\beta1 = \beta$ by the definition of multiplication.
-    We obtain $0\cdot\beta^{-1} = 0$ by exercises1(d).
-    thus if $\alpha \neq 0$, $\beta = 0$.
-    If $\alpha = 0$ and $\beta = 0$, $\alpha\beta = 0$ by exercise1.(d)
-    Therefore, If $\alpha\beta = 0$, then either $\alpha = 0$ or $\beta = 0$ (or both)
-
-    (Another way)
-    If $\alpha\beta = 0$,
+  \item[(g)]If $\alpha\beta = 0$,
     suppose $\alpha \neq 0$ and $\beta \neq 0$ hold.
-    Because of it, there exists $\alpha^{-1}$.
-    We have $0 = \alpha^{-1}0$ by definition.
-    $\alpha^{-1}0 = \alpha^{-1}\alpha\beta$ holds by supposition.
-    We obtain $\alpha^{-1}\alpha\beta = \alpha\alpha^{-1}\beta = 1\beta = \beta1 = \beta$,
+    By supposition and definition, we have $0 = \alpha^{-1}0 = \alpha^{-1}(\alpha\beta) = (\alpha^{-1}\alpha)\beta = (\alpha\alpha^{-1})\beta = 1\beta = \beta1 = \beta$,
     hence $\beta = 0$.
     However, this result contradicts supposition, "$\alpha \neq 0$ and $\beta \neq 0$".
     Therefore, if $\alpha\beta = 0$, then either $\alpha = 0$ or $\beta = 0$ (or both).
@@ -119,8 +73,27 @@ If $n$ is not given, we use $n = 1$ instead.
 	Note that the additive and multiplicative identities become $\varphi^{-1}(0)$ and $\varphi^{-1}(1)$, respectively.
 	For each $\alpha\in\mathbb{N}$, the additive inverse becomes $\varphi^{-1}(-\varphi(\alpha))$, and the multiplicative inverse becomes $\varphi^{-1}(1/\varphi(\alpha))$ if $\alpha\ne\varphi^{-1}(0)$.
 	
-	Let $\alpha,\beta,\gamma\in\mathbb{N}$.
-	Note that $\alpha \oplus \beta = \varphi^{-1} (\varphi(\alpha) + \varphi(\beta)) = \varphi^{-1} (\varphi(\beta) + \varphi(\alpha)) = \beta \oplus \alpha$ (addition is commutative); {\color{red}(from here, mohehe)} $\alpha \oplus (\beta \oplus \gamma) = \alpha \oplus (\beta \oplus \gamma) = (\alpha \oplus \beta) \oplus \gamma = \alpha \oplus (\varphi^{-1}(\varphi(\beta) + \varphi(\alpha))) = \varphi^{-1}(\varphi(\alpha) + (\varphi(\beta) + \varphi(\gamma))) = \varphi^{-1}(\varphi\varphi^{-1}(\varphi(\alpha) + \varphi(\beta)) + \varphi(\gamma)) = \varphi^{-1}(\varphi(\alpha) + \varphi(\beta)) \oplus \gamma = (\alpha \oplus \beta) \oplus \gamma$ (addition is associative); $\alpha \oplus \varphi^{-1}(0) = \varphi^{-1}(\varphi(\alpha) + \varphi(\varphi^{-1}(0))) = \varphi^{-1}(\varphi(\alpha)) = \alpha$ (there exists additive identity, $\varphi^{-1}(0)$); $-\varphi(\alpha)$ is an element in $\mathbb{Q}$ so $\varphi^{-1}(-\varphi(\alpha)) \in \mathbb{N}$. Therefore, $\alpha \oplus \varphi^{-1}(-\varphi(\alpha)) = \varphi^{-1}(\varphi(\alpha) - \varphi(\alpha)) = \varphi^{-1}(0)$. (for each element in $\mathbb{N}$, there exists additive inverse); $\alpha \otimes \beta = \varphi^{-1}(\varphi(\alpha) + \varphi(\beta)) = \varphi^{-1}(\varphi(\beta) + \varphi(\alpha)) = \beta \otimes \alpha$ (multiplication is commutative); $\alpha \otimes (\beta \otimes \gamma) = \alpha \otimes (\varphi^{-1}(\varphi(\beta)\varphi(\gamma))) = \varphi^{-1}(\varphi(\alpha)\varphi(\varphi^{-1}(\varphi(\beta)\varphi(\gamma)))) = \varphi^{-1}(\varphi(\alpha)\varphi(\beta)\varphi(\gamma)) = \varphi^{-1}(\varphi(\varphi^{-1}(\varphi(\alpha)\varphi(\beta)))\varphi(\gamma)) = \varphi^{-1}(\varphi(\alpha)\varphi(\beta)) \otimes \gamma = (\alpha \otimes \beta) \otimes \gamma$ (multiplication is associative); $\alpha \otimes \varphi^{-1}(1) = \varphi^{-1}(\varphi(\alpha)\varphi(varphi^{-1}(1))) = \varphi^{-1}(\varphi(\alpha)\cdot1) = \alpha$ (there exists additive identity, $\varphi^{-1}(1)$); $(1/\varphi(\alpha))$ is an element in $\mathbb{Q}$ so $\varphi^{-1}(1/\varphi(\alpha) \in \mathbb{N}$. Therefore, $\alpha \otimes \varphi^{-1}(1/\varphi(\alpha)) = \varphi^{-1}(\varphi(\alpha)\varphi(\varphi^{-1}(1/\varphi(\alpha)))) = \varphi^{-1}(\varphi(\alpha)(1/\varphi(\alpha))) = \varphi^{-1}(1)$. (for each element in $\mathbb{N}$, there exists multicative inverse); $\alpha \otimes (\beta \oplus \gamma) = \alpha \otimes (\varphi^{-1}(\varphi(\beta) + \varphi(\gamma))) = \varphi^{-1}(\varphi(\alpha)\varphi(\varphi^{-1}(\varphi(\beta) + \varphi(\gamma)))) = \varphi^{-1}(\varphi(\alpha)\varphi(\beta) + \varphi(\alpha)\varphi(\gamma)) = \varphi^{-1}(\varphi\varphi^{-1}(\varphi(\alpha)\varphi(\beta)) + \varphi(\alpha)\varphi(\gamma)) = \varphi^{-1}(\varphi(\alpha)\varphi(\beta)) \oplus \varphi^{-1}(\varphi(\alpha)\varphi(\gamma)) = (\alpha \otimes \beta) \oplus (\alpha \otimes \gamma)$ (distributive law stands)
+	Let $\alpha,\beta,\gamma,\alpha',\beta'\in\mathbb{N}$.
+	Note that\\
+         1) $\alpha \oplus \beta = \varphi^{-1} (\varphi(\alpha) + \varphi(\beta)) = \varphi^{-1} (\varphi(\beta) + \varphi(\alpha)) = \beta \oplus \alpha$ holds.(addition is commutative)\\
+         {\color{red}(from here, mohehe)}\\
+         2) $\alpha \oplus (\beta \oplus \gamma) = \alpha \oplus (\varphi^{-1}(\varphi(\beta) + \varphi(\gamma))) = \varphi^{-1}(\varphi(\alpha) + \varphi(\varphi^{-1}(\varphi(\beta) + \varphi(\gamma))))  = \varphi^{-1}(\varphi(\alpha) + (\varphi(\beta) + \varphi(\gamma))) = \varphi^{-1}((\varphi(\alpha) + \varphi(\beta)) + \varphi(\gamma)) = \varphi^{-1}(\varphi(\varphi^{-1}(\varphi(\alpha) + \varphi(\beta))) + \varphi(\gamma)) = \varphi^{-1}(\varphi(\alpha) + \varphi(\beta)) \oplus \gamma = (\alpha \oplus \beta) \oplus \gamma$ holds.(addition is associative)\\
+         3) $\alpha \oplus \varphi^{-1}(0) = \varphi^{-1}(\varphi(\alpha) + \varphi(\varphi^{-1}(0))) = \varphi^{-1}(\varphi(\alpha) + 0) = \varphi^{-1}(\varphi(\alpha)) = \alpha$ holds.(there exists additive identity, $\varphi^{-1}(0)$)
+         If $\alpha'$ and $\beta'$ are additive identity, 
+         we have $\alpha' = \alpha' \oplus \beta' = \beta' \oplus \alpha' = \beta'$ by 1) and the definition of additive identity.(additive identity is unique)\\
+         4) $-\varphi(\alpha)\in\mathbb{Q}$ holds by definition, so $\varphi^{-1}(-\varphi(\alpha)) \in \mathbb{N}$ holds. 
+         Therefore, $\alpha \oplus \varphi^{-1}(-\varphi(\alpha)) = \varphi^{-1}(\varphi(\alpha) + \varphi(\varphi^{-1}(-\varphi(\alpha)))) = \varphi^{-1}(\varphi(\alpha) +  (-\varphi(\alpha))) = \varphi^{-1}(0)$ holds.(for each $\alpha$ ($\alpha\in\mathbb{N}$), there exists additive inverse)
+         For each $\alpha$, if $\alpha'$ and $\beta'$ are additive inverse,
+         we have $\alpha' = \alpha' \oplus \varphi^{-1}(0) = \alpha' \oplus (\alpha \oplus \beta') = (\alpha' \oplus \alpha) \oplus \beta' = (\alpha \oplus \alpha') \oplus \beta' = \varphi^{-1}(0) \oplus \beta' = \beta \oplus \varphi^{-1}(0) = \beta'$ by 1), 2), 3) and the definition of additive inverse.(additive inverse is unique)\\
+         5) $\alpha \otimes \beta = \varphi^{-1}(\varphi(\alpha)\varphi(\beta)) = \varphi^{-1}(\varphi(\beta)\varphi(\alpha)) = \beta \otimes \alpha$ holds.(multiplication is commutative)\\
+         6) $\alpha \otimes (\beta \otimes \gamma) = \alpha \otimes (\varphi^{-1}(\varphi(\beta)\varphi(\gamma))) = \varphi^{-1}(\varphi(\alpha)\varphi(\varphi^{-1}(\varphi(\beta)\varphi(\gamma)))) = \varphi^{-1}(\varphi(\alpha)\varphi(\beta)\varphi(\gamma)) = \varphi^{-1}(\varphi(\varphi^{-1}(\varphi(\alpha)\varphi(\beta)))\varphi(\gamma)) = \varphi^{-1}(\varphi(\alpha)\varphi(\beta)) \otimes \gamma = (\alpha \otimes \beta) \otimes \gamma$ holds.(multiplication is associative)\\
+         7) $\alpha \otimes \varphi^{-1}(1) = \varphi^{-1}(\varphi(\alpha)\varphi(\varphi^{-1}(1))) = \varphi^{-1}(\varphi(\alpha)\cdot1) = \alpha$ holds.(there exists additive identity, $\varphi^{-1}(1)$)
+         If $\alpha'$ and $\beta'$ are additive identity,
+         we have $\alpha' = \alpha' \otimes \beta' = \beta' \otimes \alpha' = \beta'$ by 5) and definition of multicative identity.(multiplicative identity is unique)\\
+         8) For each $\alpha$ $(\alpha \neq \varphi^{-1}(0))$, $(1/\varphi(\alpha))\in\mathbb{Q}$ holds by definition, so $\varphi^{-1}(1/\varphi(\alpha)) \in \mathbb{N}$ holds. Therefore, $\alpha \otimes \varphi^{-1}(1/\varphi(\alpha)) = \varphi^{-1}(\varphi(\alpha)\varphi(\varphi^{-1}(1/\varphi(\alpha)))) = \varphi^{-1}(\varphi(\alpha)(1/\varphi(\alpha))) = \varphi^{-1}(1)$ holds.(for each $\alpha$ ($\alpha \in \mathbb{N}$), there exists multicative inverse)
+         For each $\alpha$ ($\alpha \neq \varphi^{-1}(0)$), if $\alpha'$ and $\beta'$ are multicative inverse,
+         we have $\alpha' = \alpha' \otimes \varphi^{-1}(1) = \alpha' \otimes (\alpha \otimes \beta') = (\alpha' \otimes \alpha) \otimes \beta' = (\alpha \otimes \alpha') \otimes \beta' = \varphi^{-1}(1) \otimes \beta' = \beta' \otimes \varphi^{-1}(1) = \beta'$ by 5), 6), 7) and the definition of multicative inverse.(multicative inverse is unique) \\
+         9) $\alpha \otimes (\beta \oplus \gamma) = \alpha \otimes (\varphi^{-1}(\varphi(\beta) + \varphi(\gamma))) = \varphi^{-1}(\varphi(\alpha)\varphi(\varphi^{-1}(\varphi(\beta) + \varphi(\gamma)))) = \varphi^{-1}(\varphi(\alpha)(\varphi(\beta) + \varphi(\gamma))) = \varphi^{-1}(\varphi(\alpha)\varphi(\beta) + \varphi(\alpha)\varphi(\gamma)) = \varphi^{-1}(\varphi(\varphi^{-1}(\varphi(\alpha)\varphi(\beta))) + \varphi(\varphi^{-1}(\varphi(\alpha)\varphi(\gamma)))) = \varphi^{-1}(\varphi(\alpha \otimes \beta) + \varphi(\alpha \otimes \gamma)) = \alpha \otimes \beta \oplus \alpha \otimes \gamma$ holds.(distributive law stands)
 \end{itemize}
 
 \begin{thebibliography}{9}
