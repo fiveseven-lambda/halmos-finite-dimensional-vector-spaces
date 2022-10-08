@@ -86,7 +86,7 @@ If $n$ is not given, we use $n = 1$ instead.
 \end{itemize}
 \end{itemize}
 
-\section{Mohehe}
+\section{Mohehe (2022/10/8)}
 \subsection{Exercise 1.3}
 \newcommand\rem{\mathbin\%} % 新しいコマンド \rem を定義．
 \newcommand\Zm{\mathcal Z_m} % 新しいコマンド \Zm を定義．
@@ -118,15 +118,18 @@ for $\alpha, \beta \in \Zm$.
   Therefore, $(\alpha \cdot_\Z \beta +_\Z (- \alpha \cdot_\Z \gamma) =)\; \alpha \cdot_\Z (\beta +_\Z (-\gamma)) = km$ holds.
   The right side has divisor m, but it contradicts that the left side doesn't have divisor of m except 1,  because $0<\alpha<(m-1)$ and ($(-m)<(\beta +_\Z (-\gamma))<0$ or $0<(\beta +_\Z (-\gamma))<m$) holds.
   Thus, there exists $\beta$ that makes $\alpha\beta = 1$.(there exists maltiplicative inverse)
-         \item $\alpha(\beta + \gamma) = (\alpha \cdot_\Z (\beta + \gamma))\rem m = (\alpha \cdot_\Z ((\beta +_\Z \gamma)\rem m))\rem m \equiv (\alpha \cdot_\Z (\beta +_\Z \gamma))\rem m = (\alpha \cdot_\Z \beta + \alpha \cdot_\Z \gamma)\rem m \equiv ((\alpha \cdot_\Z \beta)\rem m +_\Z (\alpha \cdot_\Z \gamma)\rem m)\rem m \equiv (\alpha \cdot\_Z \beta)\rem m + (\alpha \cdot_\Z \gamma)\rem m \equiv \alpha\beta + \alpha\gamma$ holds.(distributive law stands)
+         \item $\alpha(\beta + \gamma) = (\alpha \cdot_\Z (\beta + \gamma))\rem m = (\alpha \cdot_\Z ((\beta +_\Z \gamma)\rem m))\rem m \equiv (\alpha \cdot_\Z (\beta +_\Z \gamma))\rem m = (\alpha \cdot_\Z \beta + \alpha \cdot_\Z \gamma)\rem m \equiv ((\alpha \cdot_\Z \beta)\rem m +_\Z (\alpha \cdot_\Z \gamma)\rem m)\rem m \equiv (\alpha \cdot_\Z \beta)\rem m + (\alpha \cdot_\Z \gamma)\rem m \equiv \alpha\beta + \alpha\gamma$ holds.(distributive law stands)
 \end{enumerate}
   In conclusion, if $m$ is a prime, $\Zm$ is a field.
     \item[2']Proof : If $\Zm$ is a field, $m$ is a prime.\\
   By contraposition, it is equivalent to prove ``If $m$ is not a prime, $\Zm$ is not a field.''
-  We can prove 1) to 7) and 9) by the same way.
-  For all $\alpha(\alpha \neq 0)$, suppose there exists $\beta$ that makes $\alpha\beta = 1$.
-  If $m= 4$ and $\alpha = 2$, $\alpha0 = 0, \alpha1 = 2, \alpha2 = 0, \alpha3 = 2$, but it contradicts that there exists $\beta$ that makes $\alpha\beta = 1$.
-  Therefore there exists $\alpha$ that doesn't have $\beta$ that makes $\alpha\beta = 1$.
+  We can show 1) to 7) and 9) in the same way as 1'.
+  For each $m$, suppose there exist $\alpha$ and $\beta$ that make $\alpha\beta = 1$.
+  $m$ is not a prime, so let $p$ be one of prime factors of $m$ and then we have $m = p \cdot_\Z p'$.($p' \in \mathbb{Z}$ and $1 < p' < m$)\\
+  If $\alpha = p$, by $\alpha\beta = 1$ and $m = p \cdot_\Z p'$, we have $\alpha \cdot_\Z \beta = k \cdot_\Z m + 1  (k \in \mathbb{Z}) \Leftrightarrow p \cdot_\Z \beta = k \cdot_\Z p \cdot_\Z p' +_\Z 1 \Leftrightarrow (\beta +_\Z (-k \cdot_\Z p')) \cdot_\Z p = 1$.
+  The right side is 1 but the left one is not 1 because of $1 < p$ and $\beta +_\Z (-k \cdot_\Z p') \in \mathbb{Z}$.
+  Therefore It is conradicted.
+  For each $m$, there doesn't exist $\alpha$ and $\beta$ that make $\alpha\beta = 1$.
   In conclusion, ``If $m$ is not a prime, $\Zm$ is not a field.'' and ``If $\Zm$ is a field, $m$ is a prime.''
 \end{itemize}
   Because of 1' and 2', $\Zm$ is a field if and only if $m$ is a prime.
@@ -146,8 +149,20 @@ Define $\alpha_0, \alpha_1, \ldots, \in \F$ as below:
   \alpha_0 &= 0, \\
   \alpha_n &= \alpha_{n - 1} + 1 \qquad (n > 0).
 \end{align}
-We have $\alpha_m \alpha_n = \alpha_{mn}$ for all $m$ and $n$.
+We have $\alpha_m \alpha_n = \alpha_{mn}$ for all $m$ and $n$.\\
 % ここに証明①
+It is proved by the following.\\
+  \indent Proof :  $\alpha_n = n$ is true for all $n$ ...(A)
+\begin{enumerate}[\indent \; a)]
+    \item  Verify (A) is true for $n = 1$.\\
+           $\alpha_1 = \alpha_0 + 1 = 0 + 1 = 1$ holds by (1) and (2).
+    \item  assume (A) is true for $n = l$ and show (A) is true for $n = l + 1$.\\
+           $\alpha_{l + 1} = \alpha_l + 1 = l + 1$ holds by (2).
+\end{enumerate}
+
+  \indent In addition, it is true for $n = 0$ by (1)\\
+  \indent Because of it, a) and b), we have $\alpha_n = n$ is true for all $n$.\\
+  \indent Hence, $\alpha_m \alpha_n = mn = \alpha_{mn}$\\
 Assume there exists an $n$ with $\alpha_n = 0$ but $\alpha_k \ne 0$ for any $k < n$.
 It suffices to prove that $n$ is a prime.
 % ここに証明②
