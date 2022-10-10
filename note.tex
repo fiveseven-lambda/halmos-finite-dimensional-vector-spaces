@@ -151,18 +151,11 @@ Define $\alpha_0, \alpha_1, \ldots, \in \F$ as below:
 \end{align}
 We have $\alpha_m \alpha_n = \alpha_{mn}$ for all $m$ and $n$.\\
 % ここに証明①
-It is proved by the following.\\
-  \indent Proof :  $\alpha_n = n$ is true for all $n$ ...(A)
-\begin{enumerate}[\indent \; a)]
-    \item  Verify (A) is true for $n = 1$.\\
-           $\alpha_1 = \alpha_0 + 1 = 0 + 1 = 1$ holds by (1) and (2).
-    \item  assume (A) is true for $n = l$ and show (A) is true for $n = l + 1$.\\
-           $\alpha_{l + 1} = \alpha_l + 1 = l + 1$ holds by (2).
-\end{enumerate}
-
-  \indent In addition, it is true for $n = 0$ by (1)\\
-  \indent Because of it, a) and b), we have $\alpha_n = n$ is true for all $n$.\\
-  \indent Hence, $\alpha_m \alpha_n = mn = \alpha_{mn}$\\
+It is proved by the following.
+\begin{itemize}
+  \item We have $\alpha_n = 0 + \overbrace{1 + 1 + \dotsb + 1}^{n \;terms} = \overbrace{1 + 1 + \dotsb + 1}^{n \;terms}$.
+        Therefore, $\alpha_m\alpha_n = \alpha_m(\overbrace{1 + 1 + \dotsb + 1}^{n \;terms}) = \overbrace{\alpha_m +\alpha_m + \dotsb + \alpha_m}^{n \;terms} =\\ \overbrace{(1 + 1 + \dotsb + 1) + (1 + 1 + \dotsb +1) + \dotsb + (1 + 1 + \dotsb + 1)}^{n \;terms} = \overbrace{1 + 1 + \dotsb + 1}^{mn \;terms} = \alpha_{mn}$
+\end{itemize}
 Assume there exists an $n$ with $\alpha_n = 0$ but $\alpha_k \ne 0$ for any $k < n$.
 It suffices to prove that $n$ is a prime.
 % ここに証明②
