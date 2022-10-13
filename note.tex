@@ -128,7 +128,7 @@ for $\alpha, \beta \in \Zm$.
   $m$ is not a prime, so let $p$ be one of prime factors of $m$ and then we have $m = p \cdot_\Z p'$.($p' \in \mathbb{Z}$ and $1 < p' < m$)\\
   If $\alpha = p$, by $\alpha\beta = 1$ and $m = p \cdot_\Z p'$, we have $\alpha \cdot_\Z \beta = k \cdot_\Z m + 1  (k \in \mathbb{Z}) \Leftrightarrow p \cdot_\Z \beta = k \cdot_\Z p \cdot_\Z p' +_\Z 1 \Leftrightarrow (\beta +_\Z (-k \cdot_\Z p')) \cdot_\Z p = 1$.
   The right side is 1 but the left one is not 1 because of $1 < p$ and $\beta +_\Z (-k \cdot_\Z p') \in \mathbb{Z}$.
-  Therefore It is conradicted.
+  Therefore It is contradicted.
   For each $m$, there doesn't exist $\alpha$ and $\beta$ that make $\alpha\beta = 1$.
   In conclusion, ``If $m$ is not a prime, $\Zm$ is not a field.'' and ``If $\Zm$ is a field, $m$ is a prime.''
 \end{itemize}
@@ -151,14 +151,16 @@ Define $\alpha_0, \alpha_1, \ldots, \in \F$ as below:
 \end{align}
 We have $\alpha_m \alpha_n = \alpha_{mn}$ for all $m$ and $n$.\\
 % ここに証明①
-It is proved by the following.
-\begin{itemize}
-  \item We have $\alpha_n = 0 + \overbrace{1 + 1 + \dotsb + 1}^{n \;terms} = \overbrace{1 + 1 + \dotsb + 1}^{n \;terms}$.
-        Therefore, $\alpha_m\alpha_n = \alpha_m(\overbrace{1 + 1 + \dotsb + 1}^{n \;terms}) = \overbrace{\alpha_m +\alpha_m + \dotsb + \alpha_m}^{n \;terms} =\\ \overbrace{(1 + 1 + \dotsb + 1) + (1 + 1 + \dotsb +1) + \dotsb + (1 + 1 + \dotsb + 1)}^{n \;terms} = \overbrace{1 + 1 + \dotsb + 1}^{mn \;terms} = \alpha_{mn}$
-\end{itemize}
+It is proved by the following.\\
+We have $\alpha_n = \alpha_0 + \overbrace{1 + 1 + \dotsb + 1}^{n \;terms} = \overbrace{1 + 1 + \dotsb + 1}^{n \;terms}$.
+Therefore, $\alpha_m\alpha_n = \alpha_m(\overbrace{1 + 1 + \dotsb + 1}^{n \;terms}) = \overbrace{\alpha_m +\alpha_m + \dotsb + \alpha_m}^{n \;terms} =\\ \overbrace{(1 + 1 + \dotsb + 1) + (1 + 1 + \dotsb +1) + \dotsb + (1 + 1 + \dotsb + 1)}^{n \;terms} = \overbrace{1 + 1 + \dotsb + 1}^{mn \;terms} = \alpha_{mn}$\\\\
 Assume there exists an $n$ with $\alpha_n = 0$ but $\alpha_k \ne 0$ for any $k < n$.
-It suffices to prove that $n$ is a prime.
+It suffices to prove that $n$ is a prime.\\
 % ここに証明②
+Suppose n is not any prime. Let p be one of prime factors of $n$ and then we have $n = p \cdot_\Z p' (p' \in\mathbb{N}$ and $p' > 1)$.
+By $\alpha_m \alpha_n = \alpha_{mn}$ for all $m$ and $n$, $\alpha_n = \alpha_p \alpha_{p'}$ holds.
+We have either $\alpha_p = 0$ or $\alpha_{p'} = 0$ (or both) because of $\alpha_n = 0$ and Exercise 1.1 (g).
+However, it is contradictory to $\alpha_p = 0$ and $\alpha_{p'} = 0$. Therefore, $n$ is a prime.
 
 \begin{thebibliography}{9}
 \bibitem{Q_countable} \url{https://proofwiki.org/wiki/Rational_Numbers_are_Countably_Infinite}
