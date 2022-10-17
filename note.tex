@@ -117,6 +117,12 @@ for $\alpha, \beta \in \Zm$.
   Therefore, $(\alpha \cdot_\Z \beta +_\Z (- \alpha \cdot_\Z \gamma) =)\; \alpha \cdot_\Z (\beta +_\Z (-\gamma)) = km$ holds.
   The right side has divisor m, but it contradicts that the left side doesn't have divisor of m except 1,  because $0<\alpha<(m-1)$ and ($(-m)<(\beta +_\Z (-\gamma))<0$ or $0<(\beta +_\Z (-\gamma))<m$) holds.
   Thus, there exists $\beta$ that makes $\alpha\beta = 1$.(there exists maltiplicative inverse)
+  
+  \color{red}
+  A brief proof: Since each $\alpha\in\Zm\setminus\{0\}$ is coprime to $m$, there exist integers $x$ and $y$ such that $\alpha\cdot_\Z x +_\Z m\cdot_\Z y = 1$ by \cite{Bezout}.
+  Putting $x' = x\rem m\in\Zm$, we obtain $\alpha x' = (\alpha \cdot_\Z x) \rem m = (\alpha\cdot_\Z x +_\Z m\cdot_\Z y) \rem m = 1 \rem m = 1$.
+  Hence $x' = \alpha^{-1}$.
+  \color{black}
          \item $\alpha(\beta + \gamma) = (\alpha \cdot_\Z (\beta + \gamma))\rem m = (\alpha \cdot_\Z ((\beta +_\Z \gamma)\rem m))\rem m \equiv (\alpha \cdot_\Z (\beta +_\Z \gamma))\rem m = (\alpha \cdot_\Z \beta + \alpha \cdot_\Z \gamma)\rem m \equiv ((\alpha \cdot_\Z \beta)\rem m +_\Z (\alpha \cdot_\Z \gamma)\rem m)\rem m \equiv (\alpha \cdot_\Z \beta)\rem m + (\alpha \cdot_\Z \gamma)\rem m \equiv \alpha\beta + \alpha\gamma$ holds.(distributive law stands)
 \end{enumerate}
   In conclusion, if $m$ is a prime, $\Zm$ is a field.
@@ -163,5 +169,6 @@ However, it is contradictory to $\alpha_p = 0$ and $\alpha_{p'} = 0$. Therefore,
 \begin{thebibliography}{9}
 \bibitem{Q_countable} \url{https://proofwiki.org/wiki/Rational_Numbers_are_Countably_Infinite}
 \bibitem{Q_field} \url{https://proofwiki.org/wiki/Rational_Numbers_form_Field}
+\bibitem{Bezout} \url{https://proofwiki.org/wiki/Bezout\%27s_Identity}
 \end{thebibliography}
 \end{document}
