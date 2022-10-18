@@ -19,6 +19,7 @@ If $n$ is not given, we use $n = 1$ instead.
 \tableofcontents
 \section{Toga (2022/09/19)}
 \subsection{Exercise 1.1}
+\label{sec:ex1.1}
 \begin{enumerate}[label = (\alph*)]
   \item Since addition is commutative, $0 + \alpha = \alpha + 0$ holds.
     We also have $\alpha + 0 = \alpha$ by definition,
@@ -48,7 +49,8 @@ If $n$ is not given, we use $n = 1$ instead.
     By it and definition, $\alpha((-1)(-1)\beta) = \alpha(1\beta) = \alpha(\beta1) = \alpha\beta$ holds.
     Therefore, $(-\alpha)(-\beta) = \alpha\beta$ holds.
     
-  \item If $\alpha\beta = 0$,
+  \item\label{it:ex1.1.g}
+    If $\alpha\beta = 0$,
     suppose $\alpha \neq 0$ and $\beta \neq 0$ hold.
     By supposition and definition, we have $0 = \alpha^{-1}0 = \alpha^{-1}(\alpha\beta) = (\alpha^{-1}\alpha)\beta = (\alpha\alpha^{-1})\beta = 1\beta = \beta1 = \beta$,
     hence $\beta = 0$.
@@ -101,16 +103,16 @@ for $\alpha, \beta \in \Zm$.
 \begin{enumerate}[label=(\alph*)]
   \item  Let $\alpha,\beta,\gamma \in \Zm$, $k \in \mathbb{Z}$
     \begin{enumerate}[label = \arabic*']
-      \item Proof : if $m$ is a prime, $\Zm$ is a field.\\
+      \item\label{it:ex1.3.a.r} Proof : if $m$ is a prime, $\Zm$ is a field.\\
         Suppose $m$ is a prime,
         \begin{enumerate}[label=\arabic*)]
-          \item  $\alpha + \beta = (\alpha +_\Z \beta) \rem m = (\beta +_\Z \alpha) \rem m = \beta + \alpha$ (addition is commutative)
+          \item\label{it:ex1.3.a.r.A1} $\alpha + \beta = (\alpha +_\Z \beta) \rem m = (\beta +_\Z \alpha) \rem m = \beta + \alpha$ (addition is commutative)
           \item  Since $\alpha +_\Z (\beta + \gamma) = \alpha +_\Z (\beta +_\Z \gamma) \rem m \equiv \alpha +_\Z (\beta +_\Z \gamma) = (\alpha +_\Z \beta) +_\Z \gamma \equiv (\alpha +_\Z \beta) \rem m +_\Z \gamma = (\alpha + \beta) +_\Z \gamma \pmod m$ holds, $\alpha + (\beta + \gamma) = (\alpha +_\Z (\beta + \gamma)) \rem m  = ((\alpha + \beta) +_\Z \gamma) \rem m = (\alpha + \beta) + \gamma $ holds.(addition is associative)
           \item  $\alpha + 0 = (\alpha +_\Z 0) \rem m = \alpha \rem m = \alpha$ (there exists additive identity)  By it and 1), if $\beta$ and $\gamma$ are additive identity, $\beta = \beta + \gamma = \gamma + \beta = \gamma$ (additive identity is unique)
           \item  If $\alpha + _\Z\beta = m$, $\alpha + \beta = (\alpha + _\Z\beta) \rem m = m \rem m = 0$ (there exists additive inverse)
           \item  $\alpha\beta = (\alpha \cdot_\Z \beta) \rem m = (\beta \cdot_\Z \alpha) \rem m = \beta\alpha$ (multiplication is commutative)
           \item  Since $\alpha \cdot_\Z (\beta\gamma) = \alpha \cdot_\Z ((\beta \cdot_\Z \gamma) \rem m) \equiv \alpha \cdot_\Z (\beta \cdot_\Z \gamma) = (\alpha \cdot_\Z \beta) \cdot_\Z \gamma \equiv ((\alpha \cdot_\Z \beta) \rem m) \cdot_\Z \gamma = (\alpha\beta) \cdot_\Z \gamma \pmod m$ holds, $\alpha(\beta\gamma) = (\alpha \cdot_\Z (\beta\gamma)) \rem m = ((\alpha\beta)\cdot_\Z \gamma) \rem m = (\alpha\beta)\gamma$ holds.(multiplication is associative)
-          \item  $\alpha1 = (\alpha _\Z1)\rem m = \alpha \rem m = \alpha$ (there exists multiplicative identity)
+          \item\label{it:ex1.3.a.r.B3} $\alpha1 = (\alpha _\Z1)\rem m = \alpha \rem m = \alpha$ (there exists multiplicative identity)
             By it and 5), if $\beta$ and $\gamma$ are multiplicative identity, $\beta = \beta\gamma = \gamma\beta = \gamma$ (multiplicative identity is unique)
           \item For all $\alpha (\alpha \neq 0)$, suppose there doesn't exist $\beta$ that makes $\alpha\beta = 1$.
             There exist $\beta, \gamma \in \Zm$ with $\beta \neq \gamma$ and $\alpha\beta = \alpha\gamma$, because $\beta$ is any one from 0 to $m-1$ and $\alpha\beta$ is any one from 0 to $m-1$ except 1.
@@ -123,12 +125,12 @@ for $\alpha, \beta \in \Zm$.
             Putting $x' = x\rem m\in\Zm$, we obtain $\alpha x' = (\alpha \cdot_\Z x) \rem m = (\alpha\cdot_\Z x +_\Z m\cdot_\Z y) \rem m = 1 \rem m = 1$.
             Hence $x' = \alpha^{-1}$.
             \color{black}
-          \item $\alpha(\beta + \gamma) = (\alpha \cdot_\Z (\beta + \gamma))\rem m = (\alpha \cdot_\Z ((\beta +_\Z \gamma)\rem m))\rem m \equiv (\alpha \cdot_\Z (\beta +_\Z \gamma))\rem m = (\alpha \cdot_\Z \beta + \alpha \cdot_\Z \gamma)\rem m \equiv ((\alpha \cdot_\Z \beta)\rem m +_\Z (\alpha \cdot_\Z \gamma)\rem m)\rem m \equiv (\alpha \cdot_\Z \beta)\rem m + (\alpha \cdot_\Z \gamma)\rem m \equiv \alpha\beta + \alpha\gamma$ holds.(distributive law stands)
+          \item\label{it:ex1.3.a.r.C} $\alpha(\beta + \gamma) = (\alpha \cdot_\Z (\beta + \gamma))\rem m = (\alpha \cdot_\Z ((\beta +_\Z \gamma)\rem m))\rem m \equiv (\alpha \cdot_\Z (\beta +_\Z \gamma))\rem m = (\alpha \cdot_\Z \beta + \alpha \cdot_\Z \gamma)\rem m \equiv ((\alpha \cdot_\Z \beta)\rem m +_\Z (\alpha \cdot_\Z \gamma)\rem m)\rem m \equiv (\alpha \cdot_\Z \beta)\rem m + (\alpha \cdot_\Z \gamma)\rem m \equiv \alpha\beta + \alpha\gamma$ holds.(distributive law stands)
         \end{enumerate}
         In conclusion, if $m$ is a prime, $\Zm$ is a field.
-      \item Proof : If $\Zm$ is a field, $m$ is a prime.\\
+      \item\label{it:ex1.3.a.l} Proof : If $\Zm$ is a field, $m$ is a prime.\\
         By contraposition, it is equivalent to prove ``If $m$ is not a prime, $\Zm$ is not a field.''
-        We can show 1) to 7) and 9) in the same way as 1'.
+        We can show \ref{it:ex1.3.a.r.A1} to \ref{it:ex1.3.a.r.B3} and \ref{it:ex1.3.a.r.C} in the same way as \ref{it:ex1.3.a.r}.
         For each $m$, suppose there exist $\alpha$ and $\beta$ that make $\alpha\beta = 1$.
         $m$ is not a prime, so let $p$ be one of prime factors of $m$ and then we have $m = p \cdot_\Z p'$.($p' \in \mathbb{Z}$ and $1 < p' < m$)\\
         If $\alpha = p$, by $\alpha\beta = 1$ and $m = p \cdot_\Z p'$, we have $\alpha \cdot_\Z \beta = k \cdot_\Z m + 1  (k \in \mathbb{Z}) \Leftrightarrow p \cdot_\Z \beta = k \cdot_\Z p \cdot_\Z p' +_\Z 1 \Leftrightarrow (\beta +_\Z (-k \cdot_\Z p')) \cdot_\Z p = 1$.
@@ -137,7 +139,7 @@ for $\alpha, \beta \in \Zm$.
         For each $m$, there doesn't exist $\alpha$ and $\beta$ that make $\alpha\beta = 1$.
         In conclusion, ``If $m$ is not a prime, $\Zm$ is not a field.'' and ``If $\Zm$ is a field, $m$ is a prime.''
     \end{enumerate}
-    Because of 1' and 2', $\Zm$ is a field if and only if $m$ is a prime.
+    Because of \ref{it:ex1.3.a.r} and \ref{it:ex1.3.a.l}, $\Zm$ is a field if and only if $m$ is a prime.
 
   \item $4$
   \item $5$
@@ -163,7 +165,7 @@ It suffices to prove that $n$ is a prime.\\
 % ここに証明②
 Suppose n is not any prime. Let p be one of prime factors of $n$ and then we have $n = p p' (p' \in\mathbb{N}$ and $p' > 1)$.
 By $\alpha_m \alpha_n = \alpha_{mn}$ for all $m$ and $n$, $\alpha_n = \alpha_p \alpha_{p'}$ holds.
-We have either $\alpha_p = 0$ or $\alpha_{p'} = 0$ (or both) because of $\alpha_n = 0$ and Exercise 1.1 (g).
+We have either $\alpha_p = 0$ or $\alpha_{p'} = 0$ (or both) because of $\alpha_n = 0$ and \nameref{sec:ex1.1} \ref{it:ex1.1.g}.
 However, it is contradictory to $\alpha_p = 0$ and $\alpha_{p'} = 0$. Therefore, $n$ is a prime.
 
 \begin{thebibliography}{9}
