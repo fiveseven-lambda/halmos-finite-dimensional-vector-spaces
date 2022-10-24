@@ -149,15 +149,27 @@ for $\alpha, \beta \in \Zm$.
 \let\rem\undefined
 \let\Zm\undefined
 
-\subsection{Exercise 1.4}
+\subsection{Exercise 1.4 (2022/10/24)}
 \newcommand\F{\mathfrak F}
 Define $\alpha_n = \overbrace{1 + \cdots + 1}^\text{$n$ terms}$ for $n \in \{1, 2, \ldots\}$.
 Then, \begin{align*}
   \alpha_m\alpha_n
   &= \alpha_m(\overbrace{1 + \dotsb + 1}^\text{$n$ terms}) \\
-  &= \overbrace{\alpha_m + \dotsb + \alpha_m}^\text{$n$ terms} && \text{(by ...)} \\
-  &= \overbrace{(1 + \dotsb + 1) + \dotsb + (1 + \dotsb + 1)}^\text{$n$ terms} \\
-  &= \overbrace{1 + \dotsb + 1}^\text{$mn$ terms} && \text{(by ...)} \\
+  &= \alpha_m((\overbrace{1+ \dotsb + 1}^\text{$(n-1)$ terms}) + 1)\\
+  &= \alpha_m(\overbrace{1 + \dotsb + 1}^\text{$(n-1)$ terms}) + \alpha_m && \text{(by distributive law)}\\
+  &= \dotsb \\
+  &= \alpha_m(1 + 1) + \overbrace{\alpha_m + \dotsb + \alpha_m}^\text{$(n-1)$ terms}\\
+  &= \overbrace{\alpha_m + \dotsb + \alpha_m}^\text{$n$ terms} && \text{(by distributive law)} \\
+  &= \overbrace{1 + \dotsb + 1}^\text{$m$ terms} + (\overbrace{1 + \dotsb + 1}^\text{$m$ terms}) + \overbrace{\alpha_m + \dotsb + \alpha_m}^\text{$(n-2)$ terms} \\
+  &= \overbrace{1 + \dotsb + 1}^\text{$(m+1)$ terms} + (\overbrace{1 + \dotsb + 1}^\text{$(m-1)$ terms}) + \overbrace{\alpha_m + \dotsb + \alpha_m}^\text{$(n-2)$ terms} && \text{(by associative property)}  \\
+  &= \dotsb \\
+  &= \overbrace{1 + \dotsb + 1}^\text{$(2m-2)$ terms} + (1 + 1) + \overbrace{\alpha_m + \dotsb + \alpha_m}^\text{$(n-2)$ terms} \\
+  &= \overbrace{1 + \dotsb + 1}^\text{$2m$ terms} + \overbrace{\alpha_m + \dotsb + \alpha_m}^\text{$(n-2)$ terms} && \text{(by associative property)} \\
+  &= \dotsb \\
+  &= \overbrace{1 + \dotsb + 1}^\text{$m(n-1)$ terms} + \alpha_m \\
+  &= \dotsb \\
+  &= \overbrace{1 + \dotsb + 1}^\text{$(mn-2)$ terms} + (1 + 1) \\ 
+  &= \overbrace{1 + \dotsb + 1}^\text{$mn$ terms} && \text{(by associative property)}\\
   &= \alpha_{mn}
 \end{align*} for all $m, n$.\\\\
 Assume there exists an $n$ with $\alpha_n = 0$ but $\alpha_k \ne 0$ for any $k < n$.
