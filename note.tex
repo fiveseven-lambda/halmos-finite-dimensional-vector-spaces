@@ -3,6 +3,7 @@
 \usepackage{hyperref}
 \usepackage{color}
 \usepackage{enumitem}
+\allowdisplaybreaks
 
 \newcommand\Z{\mathbb Z}
 \newcommand\N{\mathbb N}
@@ -157,11 +158,11 @@ Then, \begin{align*}
   &= \alpha_m(\overbrace{1 + \dotsb + 1}^\text{$n$ terms}) \\
   &= \alpha_m((\overbrace{1+ \dotsb + 1}^\text{$(n-1)$ terms}) + 1)\\
   &= \alpha_m(\overbrace{1 + \dotsb + 1}^\text{$(n-1)$ terms}) + \alpha_m \cdot 1 && \text{(by distributive law)}\\
-  &= \alpha_m(\overbrace{1 + \dotsb + 1}^\text{$(n-1)$ terms}) + \alpha_m \cdot 1 && \text{(by definition of multiplicative identity)}\\
+  &= \alpha_m(\overbrace{1 + \dotsb + 1}^\text{$(n-1)$ terms}) + \alpha_m && \text{(by definition of multiplicative identity)}\\
   &= \dotsb \\
   &= \alpha_m(1 + 1) + \overbrace{\alpha_m + \dotsb + \alpha_m}^\text{$(n-2)$ terms}\\
   &= \alpha_m \cdot 1 + \alpha_m \cdot 1 + \overbrace{\alpha_m + \dotsb + \alpha_m}^\text{$(n-2)$ terms} && \text{(by distributive law)} \\
-  &= \overbrace{\alpha_m + \dotsb + \alpha_m}^\text{$n$ terms} && \text{(by definition of multiplicative identity} \\
+  &= \overbrace{\alpha_m + \dotsb + \alpha_m}^\text{$n$ terms} && \text{(by definition of multiplicative identity)} \\
   &= \overbrace{1 + \dotsb + 1}^\text{$m$ terms} + (\overbrace{1 + \dotsb + 1}^\text{$m$ terms}) + \overbrace{\alpha_m + \dotsb + \alpha_m}^\text{$(n-2)$ terms} \\
   &= \overbrace{1 + \dotsb + 1}^\text{$m$ terms} + ((\overbrace{1 + \dotsb + 1}^\text{$(m-1)$ terms}) + 1) + \overbrace{\alpha_m + \dotsb + \alpha_m}^\text{$(n-2)$ terms} \\
   &= \overbrace{1 + \dotsb + 1}^\text{$m$ terms} + (1 + (\overbrace{1 + \dotsb + 1}^\text{$(m-1)$ terms})) + \overbrace{\alpha_m + \dotsb + \alpha_m}^\text{$(n-2)$ terms} && \text{(by commutative property)}\\
