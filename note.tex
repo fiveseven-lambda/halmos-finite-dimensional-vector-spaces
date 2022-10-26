@@ -5,8 +5,10 @@
 \usepackage{enumitem}
 \allowdisplaybreaks
 
-\newcommand\Z{\mathbb Z}
-\newcommand\N{\mathbb N}
+\newcommand\Z{\mathcal Z}
+\newcommand\N{\mathcal N}
+\newcommand\Q{\mathcal Q}
+\newcommand\R{\mathcal R}
 
 \title{Notes on ``Finite-Dimensional Vector Spaces''\\by Paul R. Halmos}
 \author{}
@@ -63,26 +65,26 @@ If $n$ is not given, we use $n = 1$ instead.
 \begin{enumerate}[label = (\alph*)]
   \item The set of positive integers is not a field since there is no additive inverse for 1.
   \item The set of integers is not a field since there is no multiplicative inverse for 2.
-  \item There exists a bijective map $\varphi$ from $\mathbb{N}$ (or $\mathbb{Z}$) to $\mathbb{Q}$ \cite{Q_countable}, where $\mathbb{Q}$ is a field \cite{Q_field}.
-  	We can make $\mathbb{N}$ a field by re-defining (i) addition by $a \oplus b = \varphi^{-1} (\varphi(a) + \varphi(b))$ and (ii) multiplication by $a \otimes b = \varphi^{-1}(\varphi(a)\varphi(b))$ for each $a, b \in \mathbb{N}$.
+  \item There exists a bijective map $\varphi$ from $\N$ (or $\Z$) to $\Q$ \cite{Q_countable}, where $\Q$ is a field \cite{Q_field}.
+  	We can make $\N$ a field by re-defining (i) addition by $a \oplus b = \varphi^{-1} (\varphi(a) + \varphi(b))$ and (ii) multiplication by $a \otimes b = \varphi^{-1}(\varphi(a)\varphi(b))$ for each $a, b \in \N$.
     Note that the additive and multiplicative identities become $\varphi^{-1}(0)$ and $\varphi^{-1}(1)$, respectively.
-    For each $\alpha\in\mathbb{N}$, the additive inverse becomes $\varphi^{-1}(-\varphi(\alpha))$, and the multiplicative inverse becomes $\varphi^{-1}(1/\varphi(\alpha))$ if $\alpha\ne\varphi^{-1}(0)$.
+    For each $\alpha\in\N$, the additive inverse becomes $\varphi^{-1}(-\varphi(\alpha))$, and the multiplicative inverse becomes $\varphi^{-1}(1/\varphi(\alpha))$ if $\alpha\ne\varphi^{-1}(0)$.
     
-    Let $\alpha,\beta,\gamma,\alpha',\beta'\in\mathbb{N}$.
+    Let $\alpha,\beta,\gamma,\alpha',\beta'\in\N$.
     Note that
     \begin{enumerate}[label = \arabic*)]
       \item $\alpha \oplus \beta = \varphi^{-1} (\varphi(\alpha) + \varphi(\beta)) = \varphi^{-1} (\varphi(\beta) + \varphi(\alpha)) = \beta \oplus \alpha$ holds.(addition is commutative)\\
       \item $\alpha \oplus (\beta \oplus \gamma) = \alpha \oplus (\varphi^{-1}(\varphi(\beta) + \varphi(\gamma))) = \varphi^{-1}(\varphi(\alpha) + \varphi(\varphi^{-1}(\varphi(\beta) + \varphi(\gamma))))  = \varphi^{-1}(\varphi(\alpha) + (\varphi(\beta) + \varphi(\gamma))) = \varphi^{-1}((\varphi(\alpha) + \varphi(\beta)) + \varphi(\gamma)) = \varphi^{-1}(\varphi(\varphi^{-1}(\varphi(\alpha) + \varphi(\beta))) + \varphi(\gamma)) = \varphi^{-1}(\varphi(\alpha) + \varphi(\beta)) \oplus \gamma = (\alpha \oplus \beta) \oplus \gamma$ holds.(addition is associative)
       \item $\alpha \oplus \varphi^{-1}(0) = \varphi^{-1}(\varphi(\alpha) + \varphi(\varphi^{-1}(0))) = \varphi^{-1}(\varphi(\alpha) + 0) = \varphi^{-1}(\varphi(\alpha)) = \alpha$ holds.(there exists additive identity, $\varphi^{-1}(0)$)
         If $\alpha'$ and $\beta'$ are additive identity, we have $\alpha' = \alpha' \oplus \beta' = \beta' \oplus \alpha' = \beta'$ by 1) and the definition of additive identity.(additive identity is unique)
-      \item $-\varphi(\alpha)\in\mathbb{Q}$ holds by definition, so $\varphi^{-1}(-\varphi(\alpha)) \in \mathbb{N}$ holds. 
-       Therefore, $\alpha \oplus \varphi^{-1}(-\varphi(\alpha)) = \varphi^{-1}(\varphi(\alpha) + \varphi(\varphi^{-1}(-\varphi(\alpha)))) = \varphi^{-1}(\varphi(\alpha) +  (-\varphi(\alpha))) = \varphi^{-1}(0)$ holds.(for each $\alpha$ ($\alpha\in\mathbb{N}$), there exists additive inverse)
+      \item $-\varphi(\alpha)\in\Q$ holds by definition, so $\varphi^{-1}(-\varphi(\alpha)) \in \N$ holds. 
+       Therefore, $\alpha \oplus \varphi^{-1}(-\varphi(\alpha)) = \varphi^{-1}(\varphi(\alpha) + \varphi(\varphi^{-1}(-\varphi(\alpha)))) = \varphi^{-1}(\varphi(\alpha) +  (-\varphi(\alpha))) = \varphi^{-1}(0)$ holds.(for each $\alpha$ ($\alpha\in\N$), there exists additive inverse)
         For each $\alpha$, if $\alpha'$ and $\beta'$ are additive inverse, we have $\alpha' = \alpha' \oplus \varphi^{-1}(0) = \alpha' \oplus (\alpha \oplus \beta') = (\alpha' \oplus \alpha) \oplus \beta' = (\alpha \oplus \alpha') \oplus \beta' = \varphi^{-1}(0) \oplus \beta' = \beta \oplus \varphi^{-1}(0) = \beta'$ by 1), 2), 3) and the definition of additive inverse.(additive inverse is unique)
       \item $\alpha \otimes \beta = \varphi^{-1}(\varphi(\alpha)\varphi(\beta)) = \varphi^{-1}(\varphi(\beta)\varphi(\alpha)) = \beta \otimes \alpha$ holds.(multiplication is commutative)
       \item $\alpha \otimes (\beta \otimes \gamma) = \alpha \otimes (\varphi^{-1}(\varphi(\beta)\varphi(\gamma))) = \varphi^{-1}(\varphi(\alpha)\varphi(\varphi^{-1}(\varphi(\beta)\varphi(\gamma)))) = \varphi^{-1}(\varphi(\alpha)\varphi(\beta)\varphi(\gamma)) = \varphi^{-1}(\varphi(\varphi^{-1}(\varphi(\alpha)\varphi(\beta)))\varphi(\gamma)) = \varphi^{-1}(\varphi(\alpha)\varphi(\beta)) \otimes \gamma = (\alpha \otimes \beta) \otimes \gamma$ holds.(multiplication is associative)
       \item $\alpha \otimes \varphi^{-1}(1) = \varphi^{-1}(\varphi(\alpha)\varphi(\varphi^{-1}(1))) = \varphi^{-1}(\varphi(\alpha)\cdot1) = \alpha$ holds.(there exists additive identity, $\varphi^{-1}(1)$)
         If $\alpha'$ and $\beta'$ are additive identity, we have $\alpha' = \alpha' \otimes \beta' = \beta' \otimes \alpha' = \beta'$ by 5) and definition of multiplicative identity.(multiplicative identity is unique)
-      \item For each $\alpha$ $(\alpha \neq \varphi^{-1}(0))$, $(1/\varphi(\alpha))\in\mathbb{Q}$ holds by definition, so $\varphi^{-1}(1/\varphi(\alpha)) \in \mathbb{N}$ holds. Therefore, $\alpha \otimes \varphi^{-1}(1/\varphi(\alpha)) = \varphi^{-1}(\varphi(\alpha)\varphi(\varphi^{-1}(1/\varphi(\alpha)))) = \varphi^{-1}(\varphi(\alpha)(1/\varphi(\alpha))) = \varphi^{-1}(1)$ holds.(for each $\alpha$ ($\alpha \in \mathbb{N}$), there exists multiplicative inverse)
+      \item For each $\alpha$ $(\alpha \neq \varphi^{-1}(0))$, $(1/\varphi(\alpha))\in\Q$ holds by definition, so $\varphi^{-1}(1/\varphi(\alpha)) \in \N$ holds. Therefore, $\alpha \otimes \varphi^{-1}(1/\varphi(\alpha)) = \varphi^{-1}(\varphi(\alpha)\varphi(\varphi^{-1}(1/\varphi(\alpha)))) = \varphi^{-1}(\varphi(\alpha)(1/\varphi(\alpha))) = \varphi^{-1}(1)$ holds.(for each $\alpha$ ($\alpha \in \N$), there exists multiplicative inverse)
         For each $\alpha$ ($\alpha \neq \varphi^{-1}(0)$), if $\alpha'$ and $\beta'$ are multiplicative inverse, we have $\alpha' = \alpha' \otimes \varphi^{-1}(1) = \alpha' \otimes (\alpha \otimes \beta') = (\alpha' \otimes \alpha) \otimes \beta' = (\alpha \otimes \alpha') \otimes \beta' = \varphi^{-1}(1) \otimes \beta' = \beta' \otimes \varphi^{-1}(1) = \beta'$ by 5), 6), 7) and the definition of multiplicative inverse.(multiplicative inverse is unique) 
       \item $\alpha \otimes (\beta \oplus \gamma) = \alpha \otimes (\varphi^{-1}(\varphi(\beta) + \varphi(\gamma))) = \varphi^{-1}(\varphi(\alpha)\varphi(\varphi^{-1}(\varphi(\beta) + \varphi(\gamma)))) = \varphi^{-1}(\varphi(\alpha)(\varphi(\beta) + \varphi(\gamma))) = \varphi^{-1}(\varphi(\alpha)\varphi(\beta) + \varphi(\alpha)\varphi(\gamma)) = \varphi^{-1}(\varphi(\varphi^{-1}(\varphi(\alpha)\varphi(\beta))) + \varphi(\varphi^{-1}(\varphi(\alpha)\varphi(\gamma)))) = \varphi^{-1}(\varphi(\alpha \otimes \beta) + \varphi(\alpha \otimes \gamma)) = \alpha \otimes \beta \oplus \alpha \otimes \gamma$ holds.(distributive law stands)
     \end{enumerate}
@@ -102,7 +104,7 @@ Note that $\alpha + \beta = (\alpha +_\Z \beta) \rem m$
 and $\alpha\beta = (\alpha \cdot_\Z \beta) \rem m$
 for $\alpha, \beta \in \Zm$.
 \begin{enumerate}[label=(\alph*)]
-  \item  Let $\alpha,\beta,\gamma \in \Zm$, $k \in \mathbb{Z}$
+  \item  Let $\alpha,\beta,\gamma \in \Zm$, $k \in \Z$
     \begin{enumerate}[label = \arabic*']
       \item\label{it:ex1.3.a.r} Proof : if $m$ is a prime, $\Zm$ is a field.\\
         Suppose $m$ is a prime,
@@ -133,9 +135,9 @@ for $\alpha, \beta \in \Zm$.
         By contraposition, it is equivalent to prove ``If $m$ is not a prime, $\Zm$ is not a field.''
         We can show \ref{it:ex1.3.a.r.A1} to \ref{it:ex1.3.a.r.B3} and \ref{it:ex1.3.a.r.C} in the same way as \ref{it:ex1.3.a.r}.
         For each $m$, suppose there exist $\alpha$ and $\beta$ that make $\alpha\beta = 1$.
-        $m$ is not a prime, so let $p$ be one of prime factors of $m$ and then we have $m = p \cdot_\Z p'$.($p' \in \mathbb{Z}$ and $1 < p' < m$)\\
-        If $\alpha = p$, by $\alpha\beta = 1$ and $m = p \cdot_\Z p'$, we have $\alpha \cdot_\Z \beta = k \cdot_\Z m + 1  (k \in \mathbb{Z}) \Leftrightarrow p \cdot_\Z \beta = k \cdot_\Z p \cdot_\Z p' +_\Z 1 \Leftrightarrow (\beta +_\Z (-k \cdot_\Z p')) \cdot_\Z p = 1$.
-        The right side is 1 but the left one is not 1 because of $1 < p$ and $\beta +_\Z (-k \cdot_\Z p') \in \mathbb{Z}$.
+        $m$ is not a prime, so let $p$ be one of prime factors of $m$ and then we have $m = p \cdot_\Z p'$.($p' \in \Z$ and $1 < p' < m$)\\
+        If $\alpha = p$, by $\alpha\beta = 1$ and $m = p \cdot_\Z p'$, we have $\alpha \cdot_\Z \beta = k \cdot_\Z m + 1  (k \in \Z) \Leftrightarrow p \cdot_\Z \beta = k \cdot_\Z p \cdot_\Z p' +_\Z 1 \Leftrightarrow (\beta +_\Z (-k \cdot_\Z p')) \cdot_\Z p = 1$.
+        The right side is 1 but the left one is not 1 because of $1 < p$ and $\beta +_\Z (-k \cdot_\Z p') \in \Z$.
         Therefore It is contradicted.
         For each $m$, there doesn't exist $\alpha$ and $\beta$ that make $\alpha\beta = 1$.
         In conclusion, ``If $m$ is not a prime, $\Zm$ is not a field.'' and ``If $\Zm$ is a field, $m$ is a prime.''
@@ -180,10 +182,50 @@ Then, \begin{align*}
 Assume there exists an $n$ with $\alpha_n = 0$ but $\alpha_k \ne 0$ for any $k < n$.
 It suffices to prove that $n$ is a prime.\\
 % ここに証明②
-Suppose n is not any prime. Let p be one of prime factors of $n$ and then we have $n = p p' (p' \in\mathbb{N}$ and $p' > 1)$.
+Suppose n is not any prime. Let p be one of prime factors of $n$ and then we have $n = p p' (p' \in\N$ and $p' > 1)$.
 By $\alpha_m \alpha_n = \alpha_{mn}$ for all $m$ and $n$, $\alpha_n = \alpha_p \alpha_{p'}$ holds.
 We have either $\alpha_p = 0$ or $\alpha_{p'} = 0$ (or both) because of $\alpha_n = 0$ and \nameref{sec:ex1.1} \ref{it:ex1.1.g}.
 However, it is contradictory to $\alpha_p = 0$ and $\alpha_{p'} = 0$. Therefore, $n$ is a prime.
+
+\subsection{Exercise 1.5} 
+\begin{enumerate}[label = (\alph*)]
+\item
+Let $\alpha_1, \alpha_2, \alpha_3 \in \Q(\sqrt2) \subset \R$.\\
+For all $\alpha_1, \alpha_2 \in \Q(\sqrt2)$, $\alpha_1 + \alpha_2 \in \Q(\sqrt2)$ and $\alpha_1\alpha_2 \in \Q(\sqrt2)$ by the followings.\\
+For all $a,b,c,d \in \Q$, $\alpha_1 = a + b\sqrt2$ and $\alpha_2 = c + d\sqrt2$ holds.\\
+We have $\alpha_1 + \alpha_2 = (a + b\sqrt2) + (c + d\sqrt2) = (a + c) + (b + d)\sqrt2$ and $(a + c),(b + d) \in \Q$, so $\alpha_1 + \alpha_2 \in \Q(\sqrt2)$.\\
+In addition, we have $\alpha_1\alpha_2 = (a + b\sqrt2)(c + d\sqrt2) = (ac + 2bd) + (ad + bc)\sqrt2$ and $(ac + 2bd),(ad +bc) \in \Q$, so $\alpha_1\alpha_2 \in \Q(\sqrt2)$
+\begin{enumerate}[label=\arabic*)]
+\item
+$\alpha_1 + \alpha_2 = \alpha_2 + \alpha_1$ (addition is commutative)
+\item
+$\alpha_1 + (\alpha_2 + \alpha_3) = (\alpha_1 + \alpha_2) + \alpha_3$ (addition is associative)
+\item
+We have $0 = 0 + 0\sqrt2 \in \Q(\sqrt2)$ and $\alpha_1 + 0 = \alpha_1$\\($\Q(\sqrt2)$ has additive identity)
+\item
+For all $a,b \in \Q$, put $\alpha_1 = a + b\sqrt2$. 
+We have $-\alpha_1 = (-a) + (- b)\sqrt2$ and $(-a),(-b) \in \Q$. 
+Terefore, to every $\alpha_1 \in \Q\sqrt2$, there corresponds $-\alpha_1 \in \Q\sqrt2$. 
+Moreover, $\alpha_1 + (-\alpha_1) = 0$
+\item
+$\alpha_1\alpha_2 = \alpha_2\alpha_1$ (multiplication is commutative)
+\item
+$\alpha_1(\alpha_2\alpha_3) = (\alpha_1\alpha_2)\alpha_3$ (multiplication is associative)
+\item
+We have $1 = 1 + 0 \sqrt2 \in \Q(\sqrt2)$ and $\alpha_1 \cdot 1 = \alpha_1$\\
+($\Q(\sqrt2)$ has multiplicative identity)
+\item
+For all $\alpha_1 \in \Q(\sqrt2)$ with $\alpha_1 \ne 0$, put $\alpha_1 = a + b\sqrt2$ with $a,b \in \Q$. In this case, $a \ne 0 \cap b \ne 0$ holds by the followings.\\
+``If $\alpha_1 = 0$, we have $\alpha_1 = a + b\sqrt2 = 0 \Leftrightarrow a = -b\sqrt2$. 
+Therefore, $a = b = 0$ by $a,b \in \Q$.''\\
+Let $\alpha'_1 = \dfrac{1}{\alpha_1}$. $a - b\sqrt2 \ne 0$ holds by $a \ne 0 \cap b \ne 0$,
+so we have $\alpha'_1 = \dfrac{1}{a + b\sqrt2} = \dfrac{a - b\sqrt2}{a^2 - 2b^2} = \dfrac{a}{a^2 - 2b^2} + \left(-\dfrac{b}{a^2 - 2b^2}\right)\sqrt2$.\\ In addition, we have $\dfrac{a}{a^2 - 2b^2}, -\dfrac{b}{a^2 - 2b^2} \in \Q$, so there exists $\alpha'_1 \in \Q(\sqrt2)$ with $\alpha_1\alpha'_1 = 1$
+\item
+$\alpha_1(\alpha_2 + \alpha_3) = \alpha_1\alpha_2 + \alpha_1\alpha_3$ (distributive law stands)
+\end{enumerate}
+from 1) to )9, $\Q(\sqrt2)$ is a field.
+\item
+\end{enumerate}
 
 \begin{thebibliography}{9}
 \bibitem{Q_countable} \url{https://proofwiki.org/wiki/Rational_Numbers_are_Countably_Infinite}
