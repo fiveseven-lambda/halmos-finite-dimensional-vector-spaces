@@ -190,9 +190,10 @@ However, it is contradictory to $\alpha_p = 0$ and $\alpha_{p'} = 0$. Therefore,
 \subsection{Exercise 1.5} 
 \begin{enumerate}[label = (\alph*)]
 \item
+For the followings, it is used that $\Q$ and $\R$ are fields. Note that $\sqrt2 \in \R$ and $\sqrt2 \not\in \Q$\\
 Let $\alpha_1, \alpha_2, \alpha_3 \in \Q(\sqrt2) \subset \R$.\\
 For all $\alpha_1, \alpha_2 \in \Q(\sqrt2)$, $\alpha_1 + \alpha_2 \in \Q(\sqrt2)$ and $\alpha_1\alpha_2 \in \Q(\sqrt2)$ by the followings.\\
-For all $a,b,c,d \in \Q$, $\alpha_1 = a + b\sqrt2$ and $\alpha_2 = c + d\sqrt2$ holds.\\
+There exist $a,b,c,d \in \Q$, $\alpha_1 = a + b\sqrt2$ and $\alpha_2 = c + d\sqrt2$ hold.\\
 We have $\alpha_1 + \alpha_2 = (a + b\sqrt2) + (c + d\sqrt2) = (a + c) + (b + d)\sqrt2$ and $(a + c),(b + d) \in \Q$, so $\alpha_1 + \alpha_2 \in \Q(\sqrt2)$.\\
 In addition, we have $\alpha_1\alpha_2 = (a + b\sqrt2)(c + d\sqrt2) = (ac + 2bd) + (ad + bc)\sqrt2$ and $(ac + 2bd),(ad +bc) \in \Q$, so $\alpha_1\alpha_2 \in \Q(\sqrt2)$
 \begin{enumerate}[label=\arabic*)]
@@ -203,10 +204,10 @@ $\alpha_1 + (\alpha_2 + \alpha_3) = (\alpha_1 + \alpha_2) + \alpha_3$ (addition 
 \item
 We have $0 = 0 + 0\sqrt2 \in \Q(\sqrt2)$ and $\alpha_1 + 0 = \alpha_1$\\($\Q(\sqrt2)$ has additive identity)
 \item
-For all $a,b \in \Q$, put $\alpha_1 = a + b\sqrt2$. 
-We have $-\alpha_1 = (-a) + (- b)\sqrt2$ and $(-a),(-b) \in \Q$. 
-Terefore, to every $\alpha_1 \in \Q\sqrt2$, there corresponds $-\alpha_1 \in \Q\sqrt2$. 
-Moreover, $\alpha_1 + (-\alpha_1) = 0$
+For all $\alpha_1 \in \Q(\sqrt2)$, put $\alpha_1 = a + b\sqrt2$ with $a,b \in \Q$.
+There exists $\alpha'_1 \in \Q(\sqrt2)$ with $\alpha'_1 = (-a) + (-b)\sqrt2$. 
+We have $\alpha_1 + \alpha'_1 = a + b\sqrt2 + (-a) + (- b)\sqrt2 = a - a + b\sqrt2 - b\sqrt2 = 0$. 
+Therefore, to every $\alpha_1 \in \Q(\sqrt2)$, there corresponds $\alpha'_1 \in \Q(\sqrt2)$ with $\alpha_1 + (-\alpha_1) = 0$
 \item
 $\alpha_1\alpha_2 = \alpha_2\alpha_1$ (multiplication is commutative)
 \item
@@ -215,11 +216,12 @@ $\alpha_1(\alpha_2\alpha_3) = (\alpha_1\alpha_2)\alpha_3$ (multiplication is ass
 We have $1 = 1 + 0 \sqrt2 \in \Q(\sqrt2)$ and $\alpha_1 \cdot 1 = \alpha_1$\\
 ($\Q(\sqrt2)$ has multiplicative identity)
 \item
-For all $\alpha_1 \in \Q(\sqrt2)$ with $\alpha_1 \ne 0$, put $\alpha_1 = a + b\sqrt2$ with $a,b \in \Q$. In this case, $a \ne 0 \cap b \ne 0$ holds by the followings.\\
+For all $\alpha_1 \in \Q(\sqrt2)$ with $\alpha_1 \ne 0$, put $\alpha_1 = a + b\sqrt2$ with $a,b \in \Q$. In this case, $a \ne 0$ or $b \ne 0$ holds by the followings.\\
 ``If $\alpha_1 = 0$, we have $\alpha_1 = a + b\sqrt2 = 0 \Leftrightarrow a = -b\sqrt2$. 
 Therefore, $a = b = 0$ by $a,b \in \Q$.''\\
-Let $\alpha'_1 = \dfrac{1}{\alpha_1}$. $a - b\sqrt2 \ne 0$ holds by $a \ne 0 \cap b \ne 0$,
-so we have $\alpha'_1 = \dfrac{1}{a + b\sqrt2} = \dfrac{a - b\sqrt2}{a^2 - 2b^2} = \dfrac{a}{a^2 - 2b^2} + \left(-\dfrac{b}{a^2 - 2b^2}\right)\sqrt2$.\\ In addition, we have $\dfrac{a}{a^2 - 2b^2}, -\dfrac{b}{a^2 - 2b^2} \in \Q$, so there exists $\alpha'_1 \in \Q(\sqrt2)$ with $\alpha_1\alpha'_1 = 1$
+Let $\alpha''_1 = \dfrac{a}{a^2 - 2b^2} + \left(-\dfrac{b}{a^2 - 2b^2}\right)\sqrt2 \in \Q(\sqrt2)$. Note that we have $a^2 -2b^2 = (a + b\sqrt2)(a - b\sqrt2)$ and $a,b \in \Q$ with ($a \ne 0$ or $b \ne 0$), so we have $a + b\sqrt2 \ne 0$ and $a - b\sqrt2 \ne 0$, and then $a^2 -2b^2 \in \Q$ with $a^2 -2b^2 \ne 0$.
+We have $\alpha_1\alpha''_1 = (a + b\sqrt2)\left(\dfrac{a}{a^2 - 2b^2} + \left(-\dfrac{b}{a^2 - 2b^2}\right)\sqrt2\right) = \dfrac{a^2 - ab\sqrt2 + ab\sqrt2 - 2b^2 }{a^2 - 2b^2} = 1$. 
+Therefore, to every $\alpha_1 \in \Q(\sqrt2)$ with $\alpha_1 \ne 0$, there exists $\alpha''_1 \in \Q(\sqrt2)$ with $\alpha_1\alpha''_1 = 1$
 \item
 $\alpha_1(\alpha_2 + \alpha_3) = \alpha_1\alpha_2 + \alpha_1\alpha_3$ (distributive law stands)
 \end{enumerate}
