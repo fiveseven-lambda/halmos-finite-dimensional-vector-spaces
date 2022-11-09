@@ -9,6 +9,7 @@
 \newcommand\N{\mathcal N}
 \newcommand\Q{\mathcal Q}
 \newcommand\R{\mathcal R}
+\DeclareMathOperator \id{id}
 
 \title{Notes on ``Finite-Dimensional Vector Spaces''\\by Paul R. Halmos}
 \author{}
@@ -218,28 +219,29 @@ Therefore, to every $\alpha_1 \in \Q(\sqrt2)$ with $\alpha_1 \ne 0$, there exist
 \end{enumerate}
 from 1) to )9, $\Q(\sqrt2)$ is a field.
 \item
-Let $\Z(\sqrt2)$ be the set of all numbers of the form $\alpha + \beta\sqrt2$, where $\alpha$ and $\beta$ are integers. If $\Z(\sqrt2)$ is a field, $2 = 2 + 0\sqrt2 (\in \Z(\sqrt2))$ has multiplicative inverse. There exists $\exists\beta_1 = \{\alpha + \beta\sqrt2 |\beta_1 \in \Z(\sqrt2)\}$ with $2\beta_1 = 1 \Leftrightarrow \beta_1 = \frac{1}{2}$. However, $\frac{1}{2} \not\in \Z(\sqrt2)$ holds, so $\Z(\sqrt2)$ is not a field.\\\\
+Let $\Z(\sqrt2)$ be the set of all numbers of the form $\alpha + \beta\sqrt2$, where $\alpha$ and $\beta$ are integers. If $\Z(\sqrt2)$ is a field, $2 = 2 + 0\sqrt2 (\in \Z(\sqrt2))$ has multiplicative inverse. There exists $\exists\beta_1 = \{\alpha + \beta\sqrt2 |\beta_1 \in \Z(\sqrt2)\}$ with $2\beta_1 = 1 \iff \beta_1 = \frac{1}{2}$. However, $\frac{1}{2} \not\in \Z(\sqrt2)$ holds, so $\Z(\sqrt2)$ is not a field.\\\\
 Another way : Let $\Z(\sqrt2)$ be the set of all numbers of the form $\alpha + \beta\sqrt2$, where $\alpha$ and $\beta$ are integers. 
 $\Z(\sqrt2)$ is not a field since there is no multiplicative inverse for $2 + \sqrt2 \in \Z(\sqrt2)$ by the followings.\\
 Suppose there exists multiplicative inverse for $2 + \sqrt2$.
 There exists $\exists\beta_1 \in \Z(\sqrt2)$ with $\beta_1 = \alpha + \beta\sqrt2$ and $(2 + \sqrt2)\beta_1 = 1$ by supposition.
-Therefore, we have $(2 + \sqrt2)\beta_1 = (2 + \sqrt2)(\alpha + \beta\sqrt2) = 2(\alpha + \beta) + (\alpha + 2\beta)\sqrt2 = 1$ $\Leftrightarrow$ $2(\alpha + \beta) - 1 = -(\alpha + 2\beta)\sqrt2$ $\Leftarrow$ $2(2(\alpha + \beta)^2 - 2(\alpha + \beta)) - 1 = 2(\alpha + 2\beta)^2$.
+Therefore, we have $(2 + \sqrt2)\beta_1 = (2 + \sqrt2)(\alpha + \beta\sqrt2) = 2(\alpha + \beta) + (\alpha + 2\beta)\sqrt2 = 1 \iff 2(\alpha + \beta) - 1 = -(\alpha + 2\beta)\sqrt2 \implies 2(2(\alpha + \beta)^2 - 2(\alpha + \beta)) - 1 = 2(\alpha + 2\beta)^2$.
 It is contradicted because the left is odd number and the right is even number.
-Therefore, $(2 + \sqrt2)\beta_1 = 1$ is contradicted and then there is no multiplicative inverse for $2 + \sqrt2$
+Therefore, $(2 + \sqrt2)\beta_1 = 1$ is contradicted and then there is no multiplicative inverse for $2 + \sqrt2$.
 \end{enumerate}
 
 \subsection{Exercise 1.6}
 \begin{enumerate}[label = (\alph*)]
 \item
-Let $P$ be such set of all polynamials with integer coefficients, %Ｐは関数
-$id(x)$ be $id(x) = \{x|\; \exists x \in \R \}$ with $id \in P$ and 
-$I(x) = 1$ with $I \in P$\\
-Suppose there exists $\exists q \in P$ with $id \cdot q = I$.
-Then, we have $id(0) \cdot q(0) = 0$, and it is contradicted to supposition.
-Therefore, there does not exist  $q \in P$ with $id \cdot q = I$, in other word, $id(x)$ does not have multiplicative inverse.
-In conclusion, the set of all polynomials with integer coefficients do not form a field.   
+Let $P$ be such set of all polynomials with integer coefficients, %Ｐは関数
+$\id \in P$ be $\id(x) = x$ ($x \in \R$), and 
+$I \in P$ be $I(x) = 1$ ($x \in \R$).
+
+Suppose there exists $q \in P$ with $\id \cdot q = I$.
+Then, we have $\id(0) \cdot q(0) = 0$, and it is contradicted to supposition.
+Therefore, there does not exist  $q \in P$ with $\id \cdot q = I$. In other words, $\id$ does not have the multiplicative inverse.
+In conclusion, the set of all polynomials with integer coefficients does not form a field.   
 \item
-the set of all polynomials with real number coefficients do not form a field for the same reason.   
+the set of all polynomials with real number coefficients does not form a field for the same reason.   
 \end{enumerate}
 
 \begin{thebibliography}{9}
