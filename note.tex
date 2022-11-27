@@ -40,7 +40,7 @@ If $n$ is not given, we use $n = 1$ instead.
   \item We have $\alpha + (\beta - \alpha) = \alpha + (\beta + (-\alpha)) = \alpha + ((-\alpha) + \beta) = (\alpha + (-\alpha)) + \beta = 0 + \beta = \beta + 0 = \beta$ by definition.
     Therefore, $\alpha + (\beta - \alpha) = \beta$ holds.
     
-  \item We have $\alpha0 + \alpha0 = \alpha(0 + 0) = \alpha0 = \alpha + 0$ by definition,
+  \item We have $\alpha0 + \alpha0 = \alpha(0 + 0) = \alpha0 = \alpha 0 + 0$ by definition,
     hence $\alpha0 = 0$ by Exercise 1(b).
     We also have $\alpha\cdot0 = 0\cdot\alpha$ by definition.
     Therefore, $\alpha\cdot0 = 0\cdot\alpha = 0$
@@ -183,7 +183,7 @@ Then, \begin{align*}
 \end{align*} for all $m, n$.\\\\
 Assume there exists an $n$ with $\alpha_n = 0$ but $\alpha_k \ne 0$ for any $k < n$.
 It suffices to prove that $n$ is a prime.\\
-% ここに証明②
+% ここに証明\UTF{2461}%
 Suppose n is not any prime. Let p be one of prime factors of $n$ and then we have $n = p p' (p' \in\N$ and $p' > 1)$.
 By $\alpha_m \alpha_n = \alpha_{mn}$ for all $m$ and $n$, $\alpha_n = \alpha_p \alpha_{p'}$ holds.
 We have either $\alpha_p = 0$ or $\alpha_{p'} = 0$ (or both) because of $\alpha_n = 0$ and \nameref{sec:ex1.1} \ref{it:ex1.1.g}.
@@ -302,7 +302,19 @@ In conclusion, $\F'$ is not a field.
 \end{itemize}
 \end{enumerate}
 
-
+\section{Johno (2022/11/27)}
+\subsection{Exercise 2.1}
+\begin{enumerate}[label = (\alph*)]
+\item We have $0+x = x+0 = x$ by definition.
+\item It follows from definition that $0+0=0$, hence $0 = -0$ by the uniqueness of additive inverse.
+\item We can prove this as in Exercise 1.1 (d).
+\item The same as above.
+\item Let $\alpha x = 0$ hold.
+If $\alpha \ne 0$, then $x = 1x = (\frac{1}{\alpha}\alpha)x = \frac{1}{\alpha} (\alpha x) = \frac{1}{\alpha}0 = 0$ by definition and Exercise 2.1 (c).
+\item By definition and Exercise 2.1 (d), we have $1x + (-1)x = (1-1)x  = 0x =0$.
+Hence $-x = -(1x) = (-1)x$.
+\item It follows from definition that $y + (x-y) = y + (-y + x) = (y - y) + x = 0 + x =x + 0 = x$.
+\end{enumerate}
 
 \begin{thebibliography}{9}
 \bibitem{Q_countable} \url{https://proofwiki.org/wiki/Rational_Numbers_are_Countably_Infinite}
