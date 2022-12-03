@@ -264,15 +264,15 @@ Let $(\alpha_1,\beta_1),(\alpha_2,\beta_2),(\alpha_3,\beta_3) \in \F$ with $\alp
 \begin{enumerate}[label=(\arabic*)]
 \item $(\alpha_1,\beta_1) + (\alpha_2,\beta_2) = (\alpha_1 + \alpha_2, \beta_1 + \beta_2) = (\alpha_2, \beta_2) + (\alpha_1, \beta_1)$.(addition is commutative)
 \item $(\alpha_1, \alpha_1) + ((\alpha_2,\beta_2) + (\alpha_3, \beta_3)) = (\alpha_1 + \alpha_2 + \alpha_3, \beta_1 + \beta_2 + \beta_3) = ((\alpha_1,\beta_1) + (\alpha_2, \beta_2)) + (\alpha_3, \beta_3)$.(addition is associative)
-\item There exists $(0,0) \in \F$ such that $(\alpha_1, \beta_1) + (0,0) = (\alpha_1, \beta_1)$ for every $(\alpha_1,\beta_1)$. ($\F$ has aditive identity)
-\item For every $(\alpha_1,\beta_1)$, there exists $(-\alpha_1, -\beta_1) \in \F$ such that $(\alpha_1, \beta_1) + (-\alpha_1, -\beta_1) = (0,0)$ holds.(There exists additive inverse for every element in $\F$)
+\item There exists $(0,0) \in \F$ such that $(\alpha_1, \beta_1) + (0,0) = (\alpha_1, \beta_1)$ for every $(\alpha_1,\beta_1)$. ($\F$ has additive identity)
+\item For every $(\alpha_1,\beta_1)$, there exists $(-\alpha_1, -\beta_1) \in \F$ such that $(\alpha_1, \beta_1) + (-\alpha_1, -\beta_1) = (0,0)$.
 \end{enumerate}
 \item
 \begin{enumerate}[label=(\arabic*)]
 \item $(\alpha_1,\beta_1)(\alpha_2,\beta_2) = (\alpha_1\alpha_2 - \beta_1\beta_2,\alpha_1\beta_2 + \alpha_2\beta_1) = (\alpha_2,\beta_2)(\alpha_1,\beta_1)$. (multiplication is commutative)
 \item $((\alpha_1,\beta_1)(\alpha_2,\beta_2))(\alpha_3,\beta_3) = (\alpha_1\alpha_2\alpha_3-\beta_1\beta_2\alpha_3-\alpha_1\beta_2\beta_3-\beta_1\alpha_2\beta_3,\alpha_1\beta_2\alpha_3+\beta_1\alpha_2\alpha_3+\alpha_1\alpha_2\beta_3-\beta_1\beta_2\beta_3) = (\alpha_1,\beta_1)((\alpha_2,\beta_2)(\alpha_3,\beta_3))$.(multiplication is associative)
 \item There exists $(1,0) \in \F$ such that $(\alpha_1,\beta_1)(1,0) = (\alpha_1,\beta_1)$ for every $(\alpha_1,\beta_1)$. ($\F$ has multiplicative identity)
-\item For every $(\alpha_1,\beta_1) (\ne (0,0))$, there exists $\left(\frac{\alpha_1}{\alpha_1^2+\beta_1^2},-\frac{\beta_1}{\alpha_1^2+\beta_1^2}\right) \in \F$ such that $(\alpha_1,\beta_1)\left(\frac{\alpha_1}{\alpha_1^2+\beta_1^2},-\frac{\beta_1}{\alpha_1^2+\beta_1^2}\right) = (1,0)$.(There exists multiplicative inverse for every element in $\F$)
+\item For every $(\alpha_1,\beta_1) (\ne (0,0))$, there exists $\left(\frac{\alpha_1}{\alpha_1^2+\beta_1^2},-\frac{\beta_1}{\alpha_1^2+\beta_1^2}\right) \in \F$ such that $(\alpha_1,\beta_1)\left(\frac{\alpha_1}{\alpha_1^2+\beta_1^2},-\frac{\beta_1}{\alpha_1^2+\beta_1^2}\right) = (1,0)$.
 \end{enumerate}
 \item $(\alpha_1,\beta_1)((\alpha_2,\beta_2) + (\alpha_3,\beta_3)) = (\alpha_1,\beta_1)(\alpha_2+\alpha_3,\beta_2+\beta_3) = (\alpha_1\alpha_2 + \alpha_1\alpha_3-\beta_1\beta_2-\beta_1\beta_3,\alpha_1\beta_2+\alpha_1\beta_3+\beta_1\alpha_2+\beta_1\alpha_3) = (\alpha_1\alpha_2 - \beta_1\beta_2,\alpha_1\beta_2 + \beta_1\alpha_2) + (\alpha_1\alpha_3 - \beta_1\beta_3,\alpha_1\beta_3 + \alpha_3\beta_1) = (\alpha_1,\beta_1)(\alpha_2,\beta_2) + (\alpha_1,\beta_1)(\alpha_3,\beta_3)$.(distributive law stands)
 \end{enumerate}
@@ -317,14 +317,60 @@ Hence $-x = -(1x) = (-1)x$.
 \end{enumerate}
 
 \section{Mohehe (2022/11/31)}
+\newcommand \V{\mathcal{V}}
 \subsection{Exercise 2.2}
 We have $Z_p^n = \{(x_1,x_2, \dots , x_n):x_1,x_2,\dots,x_n \in Z_p\}$.
 Moreover, $Z_p$ has $p$ members.
 Therefore, the number of  the vectors in this vector space is $p^2$.
 
 \subsection{Exercise 2.3}
-Suppose $\mathcal{V}$ is a vector space.
-If $x = (0,1) \in \mathcal{V}$, we have $1(0,1) = (0,1)$ by definition of vector spaces, but we also have$1(0,1) = (0,0)$ by definition of $\mathcal{V}$. It is contradicted, so $\mathcal{V}$ is not a vector space.
+Suppose $\V$ is a vector space.
+If $x = (0,1) \in \V$, we have $1(0,1) = (0,1)$ by definition of vector spaces, but we also have$1(0,1) = (0,0)$ by definition of $\V$. It is contradicted, so $\V$ is not a vector space.
+
+\subsection{Exercise 2.4}
+\begin{enumerate}[label=(\alph*)]
+\item
+For $(1,0,0) \in\V$ and $i \in\C$, we have $i(1,0,0) = (i,0,0) \not\in\V$, because $i \not\in\R$. Therefore $\V$ is not a vector space.
+\item
+Let $(0,a_2,a_3), (0,b_2,b_3), (0,c_2,c_3) \in\V$ and $\alpha, \beta \in\C$.
+
+We have $(0,a_2,a_3) + (0,b_2,b_3) = (0,a_2+b_2,a_3+b_3) \in\V$ and $\alpha(0,a_2,a_3) = (0,\alpha a_2,\alpha a_3) \in\V$. Therefore $\V$ is closed under addition and scalar multiplication.
+\begin{enumerate}[label = (\Alph*)]
+\item
+\begin{enumerate}[label = (\arabic*)]
+\item
+$(0,a_2,a_3) + (0,b_2,b_3) = (0,a_2+b_2,a_3+b_3) = (0,b_2,b_3) + (0,a_2,a_3)$. (addition is commutative)
+\item
+$(0,a_2,a_3)+((0,b_2,b_3)+(0,c_2,c_3))=(0,a_2,a_3)+(0,b_2+c_2,b_3+c_3)=(0,a_2+b_2+c_2,a_3+b_3+c_3) = (0,a_2,a_3)+(0,b_2,b_3)+(0,c_2,c_3)$. (addition is associative)
+\item
+There exists $(0,0,0)\in\V$ such that $(0,a_2,a_3) + (0,0,0) = (0,a_2,a_3)$ for every $(0,a_2,a_3)$. ($\V$ has additive identity)
+\item
+For every $(0,a_2,a_3)$, there exists $(0,-a_2,-a_3)$ such that $(0,a_2,a_3) + (0,-a_2,-a_3) = (0,0,0)$.
+\end{enumerate}
+\item
+\begin{enumerate}[label = (\arabic*)]
+\item
+$\alpha(\beta(0,a_2,a_3)) = (0,\alpha\beta a_2,\alpha\beta a_3) = (\alpha\beta)(0,a_2,a_3)$. (multiplication by scalars is associative)
+\item
+We have $1(0,a_2,a_3) = (0,a_2,a_3)$ for $1 \in\C$ and for every $(0,a_2,a_3)$. 
+\end{enumerate}
+\item
+\begin{enumerate}[label = (\arabic*)]
+\item
+$\alpha((0,a_2,a_3) + (0,b_2,b_3)) = \alpha(0,a_2+b_2,a_3+b_3) = (0,\alpha a_2+\alpha b_2,\alpha a_3+\alpha b_3) = (0,\alpha a_2,\alpha a_3) + (0,\alpha b_2,\alpha b_3) = \alpha(0,a_2,a_3)+\alpha(0,b_2,b_3)$. 
+\item
+$(\alpha + \beta)(0,a_2,a_3) = (0,(\alpha+\beta)a_2,(\alpha+\beta)a_3) = (0,\alpha a_2+\beta a_2,\alpha a_3+\beta a_3) = (0,\alpha a_2,\alpha a_3) + (0,\beta a_2,\beta a_3) = \alpha(0,a_2,a_3) + \beta(0,a_2,a_3)$.
+\end{enumerate}
+\end{enumerate}
+In conclusion, $\V$ is a vector space.
+\item
+For $(0,1,1),(1,0,1) \in \V$, we have $(0,1,1) + (1,0,1) = (1,1,2) \not\in\V$, because $1 \ne 0$. Therefore $\V$ is not a vector space.
+\item
+For $(1+i,1-i,0) \in\V$, we have $i(1+i,1-i,0) = (-1+i,1+i,0) \not\in\V$, because $(-1+i)+(1+i)=2i\ne 0$. Therefore $\V$ is not a vector space.
+\item
+For $(1,0,0),(0,1,0) \in \V$, we have $(1,0,0) + (0,1,0) = (1,1,0) \not\in\V$, because $1 + 1 \ne 0$. Therefore $\V$ is not a vector space.
+\end{enumerate}
+\let\V\undefined
 
 \begin{thebibliography}{9}
 \bibitem{Q_countable} \url{https://proofwiki.org/wiki/Rational_Numbers_are_Countably_Infinite}
