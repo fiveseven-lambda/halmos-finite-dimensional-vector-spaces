@@ -321,7 +321,7 @@ Hence $-x = -(1x) = (-1)x$.
 \subsection{Exercise 2.2}
 We have $Z_p^n = \{(x_1,x_2, \dots , x_n):x_1,x_2,\dots,x_n \in Z_p\}$.
 Moreover, $Z_p$ has $p$ members.
-Therefore, the number of  the vectors in this vector space is $p^2$.
+Therefore, the number of  the vectors in this vector space is $p^n$.
 
 \subsection{Exercise 2.3}
 Suppose $\V$ is a vector space.
@@ -365,8 +365,40 @@ $(\alpha + \beta)(0,a_2,a_3) = (0,(\alpha+\beta)a_2,(\alpha+\beta)a_3) = (0,\alp
 In conclusion, $\V$ is a vector space.
 \item
 For $(0,1,1),(1,0,1) \in \V$, we have $(0,1,1) + (1,0,1) = (1,1,2) \not\in\V$, because $1 \ne 0$. Therefore $\V$ is not a vector space.
+
 \item
-For $(1+i,1-i,0) \in\V$, we have $i(1+i,1-i,0) = (-1+i,1+i,0) \not\in\V$, because $(-1+i)+(1+i)=2i\ne 0$. Therefore $\V$ is not a vector space.
+
+Let $(a_1,a_2,a_3), (b_1,b_2,b_3), (c_1,c_2,c_3) \in\V$ with $a_1+a_2=b_1+b_2=c_1+c_2=0$ and $\alpha, \beta \in\C$.
+
+We have $(a_1,a_2,a_3) + (b_1,b_2,b_3) = (a_1+b_1,a_2+b_2,a_3+b_3) \in\V$ because $a_1+b_1+a_2+b_2=0$. Moreover, we have $\alpha(a_1,a_2,a_3) = (\alpha a_1,\alpha a_2,\alpha a_3) \in\V$ because $\alpha a_1+\alpha a_2=\alpha(a_1+a_2)=0$. Therefore $\V$ is closed under addition and scalar multiplication.
+\begin{enumerate}[label = (\Alph*)]
+\item
+\begin{enumerate}[label = (\arabic*)]
+\item
+$(a_1,a_2,a_3) + (b_1,b_2,b_3) = (a_1+b_1,a_2+b_2,a_3+b_3) = (b_1,b_2,b_3) + (a_1,a_2,a_3)$. (addition is commutative)
+\item
+$(a_1,a_2,a_3)+((b_1,b_2,b_3)+(c_1,c_2,c_3))=(a_1,a_2,a_3)+(b_1+b_1,b_2+c_2,b_3+c_3)=(a_1+b_1+c_1,a_2+b_2+c_2,a_3+b_3+c_3) = (a_1,a_2,a_3)+(b_1,b_2,b_3)+(c_1,c_2,c_3)$. (addition is associative)
+\item
+There exists $(0,0,0)\in\V$ such that $(a_1,a_2,a_3) + (0,0,0) = (a_1,a_2,a_3)$ for every $(a_1,a_2,a_3)$. ($\V$ has additive identity)
+\item
+For every $(a_1,a_2,a_3)$, there exists $(-a_1,-a_2,-a_3)$ such that $(a_1,a_2,a_3) + (-a_1,-a_2,-a_3) = (0,0,0)$.
+\end{enumerate}
+\item
+\begin{enumerate}[label = (\arabic*)]
+\item
+$\alpha(\beta(a_1,a_2,a_3)) = (\alpha\beta a_1,\alpha\beta a_2,\alpha\beta a_3) = (\alpha\beta)(a_1,a_2,a_3)$. (multiplication by scalars is associative)
+\item
+We have $1(a_1,a_2,a_3) = (a_1,a_2,a_3)$ for $1 \in\C$ and for every $(a_1,a_2,a_3)$. 
+\end{enumerate}
+\item
+\begin{enumerate}[label = (\arabic*)]
+\item
+$\alpha((a_1,a_2,a_3) + (b_1,b_2,b_3)) = \alpha(a_1+b_1,a_2+b_2,a_3+b_3) = (\alpha a_1+\alpha b_1,\alpha a_2+\alpha b_2,\alpha a_3+\alpha b_3) = (\alpha a_1,\alpha a_2,\alpha a_3) + (\alpha b_1,\alpha b_2,\alpha b_3) = \alpha(a_1,a_2,a_3)+\alpha(b_1,b_2,b_3)$. 
+\item
+$(\alpha + \beta)(a_1,a_2,a_3) = ((\alpha+\beta)a_1,(\alpha+\beta)a_2,(\alpha+\beta)a_3) = (\alpha a_1+ \beta a_1,\alpha a_2+\beta a_2,\alpha a_3+\beta a_3) = (\alpha a_1,\alpha a_2,\alpha a_3) + (\beta a_1,\beta a_2,\beta a_3) = \alpha(a_1,a_2,a_3) + \beta(a_1,a_2,a_3)$.
+\end{enumerate}
+\end{enumerate}
+
 \item
 For $(1,0,0),(0,1,0) \in \V$, we have $(1,0,0) + (0,1,0) = (1,1,0) \not\in\V$, because $1 + 1 \ne 0$. Therefore $\V$ is not a vector space.
 \end{enumerate}
