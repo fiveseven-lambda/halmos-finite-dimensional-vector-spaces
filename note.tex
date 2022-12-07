@@ -418,7 +418,7 @@ For $\V$ multiplication by scalars is associative, because $\V\subset\PP$.
 By it and $2x(0) = x(1)$, $2(\alpha x)(0) = 2\alpha x(0) = \alpha 2x(0) = \alpha (2x(0)) = \alpha x(1)$
 Therefore, $\V$ is closed.
 For $\V$ addition is associative and commutative, multiplication by scalar is associative, $1x = x$ ($1 \in\C$) for every vector $x$, multiplication by scalars is distributive with respect to vector addition, and multiplication by vectors is distributive with respect to scalar addition, because $\V\subset\PP$.
-In addition, there exists $0 \in\V$ such that $x + 0 = x$, and to every vector $x$ there corresponds a vector $-x$ such that $x + (-x) = 0$ because $-2x(0) = x(1)$.
+In addition, there exists $0 \in\V$ such that $x + 0 = x$, and to every vector $x \in\V$ there corresponds a vector $-x \in\V$ such that $x + (-x) = 0$.
 In conclution, $\V$ is vector space.
 
 \item
@@ -426,7 +426,12 @@ Let $x \in\V$ with $x \ne 0$.
 For $-1 \in\C$, $-1x = -x (\ne 0)$ by Exercise 2.1(f). However $-x \not\in\V$ because $-x < 0$.
 Therefore $\V$ is not a vector space.
 \item
+Let $x,y \in\V$, $\alpha \in\C$.
 
+We have $(x+y)(t) = x(t) + y(t) = x(1-t) + y(1-t) = (x+y)(1-t)$ and $(\alpha x)(t) = \alpha x(t) = \alpha x(1-t) = (\alpha t)(1-t)$ by $x(t) = x(1-t)$.
+Therefore $\V$ is closed.
+For $\V$, there exists $0 \in\V$ such that $x + 0 = x$, and to every vector $x \in\V$ there corresponds a vector $-x \in\V$ such that $x + (-x) = 0$.
+Thus, similar to (d), $\V$ is vector space.
 \end{enumerate}
 \let\V\undefined
 \let\PP\undefined
