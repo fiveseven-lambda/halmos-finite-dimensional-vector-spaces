@@ -317,7 +317,8 @@ Hence $-x = -(1x) = (-1)x$.
 \end{enumerate}
 
 \section{Mohehe (2022/11/31)}
-\newcommand \V{\mathcal{V}}
+\newcommand \V{\mathcal V}
+\newcommand \PP{\mathcal P}
 \subsection{Exercise 2.2}
 We have $Z_p^n = \{(x_1,x_2, \dots , x_n):x_1,x_2,\dots,x_n \in Z_p\}$.
 Moreover, $Z_p$ has $p$ members.
@@ -402,7 +403,33 @@ $(\alpha + \beta)(a_1,a_2,a_3) = ((\alpha+\beta)a_1,(\alpha+\beta)a_2,(\alpha+\b
 \item
 For $(1,0,0),(0,1,0) \in \V$, we have $(1,0,0) + (0,1,0) = (1,1,0) \not\in\V$, because $1 + 1 \ne 0$. Therefore $\V$ is not a vector space.
 \end{enumerate}
+
+\subsection{Exercise 2.5}
+\begin{enumerate}[label = (\alph*)]
+\item
+For $t^3+t^2,-t^3 \in\V$, we have $t^3+t^2+(-t^3) = t^2 \not\in\V$, because $t^2$ doesn't have degree $3$. Therefore $\V$ is not a vector space.
+\item
+Let $x,y \in\V$, $\alpha \in \C$.
+
+%(x+y)(0) = x(0)+y(0) はOK?
+For $\V$ multiplication by scalars is distributive with respect to vector addition, because $\V\subset\PP$.
+By it and $2x(0) = x(1)$, $2(x+y)(0) = 2(x(0)+y(0)) = 2x(0) + 2y(0) = x(1) + y(1) = (x+y)(1)$.
+For $\V$ multiplication by scalars is associative, because $\V\subset\PP$.
+By it and $2x(0) = x(1)$, $2(\alpha x)(0) = 2\alpha x(0) = \alpha 2x(0) = \alpha (2x(0)) = \alpha x(1)$
+Therefore, $\V$ is closed.
+For $\V$ addition is associative and commutative, multiplication by scalar is associative, $1x = x$ ($1 \in\C$) for every vector $x$, multiplication by scalars is distributive with respect to vector addition, and multiplication by vectors is distributive with respect to scalar addition, because $\V\subset\PP$.
+In addition, there exists $0 \in\V$ such that $x + 0 = x$, and to every vector $x$ there corresponds a vector $-x$ such that $x + (-x) = 0$ because $-2x(0) = x(1)$.
+In conclution, $\V$ is vector space.
+
+\item
+Let $x \in\V$ with $x \ne 0$.
+For $-1 \in\C$, $-1x = -x (\ne 0)$ by Exercise 2.1(f). However $-x \not\in\V$ because $-x < 0$.
+Therefore $\V$ is not a vector space.
+\item
+
+\end{enumerate}
 \let\V\undefined
+\let\PP\undefined
 
 \begin{thebibliography}{9}
 \bibitem{Q_countable} \url{https://proofwiki.org/wiki/Rational_Numbers_are_Countably_Infinite}
