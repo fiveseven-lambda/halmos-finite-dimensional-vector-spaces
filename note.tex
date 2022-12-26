@@ -1,9 +1,20 @@
 \documentclass{article}
-\usepackage{amsmath,amssymb}
+\usepackage{amsmath,amssymb, amsthm}
 \usepackage{hyperref}
 \usepackage{color}
 \usepackage{enumitem}
 \allowdisplaybreaks
+
+\theoremstyle{thmstyleone}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{thmstyletwo}
+\newtheorem{remark}[theorem]{Remark}
+\theoremstyle{thmstylethree}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{notation}{Notation}
 
 \newcommand\Z{\mathcal Z}
 \newcommand\N{\mathcal N}
@@ -303,7 +314,7 @@ In conclusion, $\F'$ is not a field.
 \end{enumerate}
 
 \section{Johno (2022/11/27)}
-\subsection{Exercise 2.1}
+\subsection{Exercise 4.1}
 \begin{enumerate}[label = (\alph*)]
 \item We have $0+x = x+0 = x$ by definition.
 \item It follows from definition that $0+0=0$, hence $0 = -0$ by the uniqueness of additive inverse.
@@ -319,16 +330,16 @@ Hence $-x = -(1x) = (-1)x$.
 \section{Mohehe (2022/11/31)}
 \newcommand \V{\mathcal V}
 \newcommand \PP{\mathcal P}
-\subsection{Exercise 2.2}
+\subsection{Exercise 4.2}
 We have $Z_p^n = \{(x_1,x_2, \dots , x_n):x_1,x_2,\dots,x_n \in Z_p\}$.
 Moreover, $Z_p$ has $p$ members.
 Therefore, the number of  the vectors in this vector space is $p^n$.
 
-\subsection{Exercise 2.3}
+\subsection{Exercise 4.3}
 Suppose $\V$ is a vector space.
 If $x = (0,1) \in \V$, we have $1(0,1) = (0,1)$ by definition of vector spaces, but we also have$1(0,1) = (0,0)$ by definition of $\V$. It is contradicted, so $\V$ is not a vector space.
 
-\subsection{Exercise 2.4}
+\subsection{Exercise 4.4}
 \begin{enumerate}[label=(\alph*)]
 \item
 For $(1,0,0) \in\V$ and $i \in\C$, we have $i(1,0,0) = (i,0,0) \not\in\V$, because $i \not\in\R$. Therefore $\V$ is not a vector space.
@@ -404,7 +415,7 @@ $(\alpha + \beta)(a_1,a_2,a_3) = ((\alpha+\beta)a_1,(\alpha+\beta)a_2,(\alpha+\b
 For $(1,0,0),(0,1,0) \in \V$, we have $(1,0,0) + (0,1,0) = (1,1,0) \not\in\V$, because $1 + 1 \ne 0$. Therefore $\V$ is not a vector space.
 \end{enumerate}
 
-\subsection{Exercise 2.5}
+\subsection{Exercise 4.5}
 \begin{enumerate}[label = (\alph*)]
 \item
 For $t^3+t^2,-t^3 \in\V$, we have $t^3+t^2+(-t^3) = t^2 \not\in\V$, because $t^2$ doesn't have degree $3$. Therefore $\V$ is not a vector space.
@@ -435,6 +446,21 @@ Thus, similar to (d), $\V$ is vector space.
 \end{enumerate}
 \let\V\undefined
 \let\PP\undefined
+
+\section{Johno (2022/12/26)}
+\subsection{Section 6}
+\begin{remark}
+If $\{x_i\}$ is linearly independent, then a necessary and sufficient condition that $x$ be a linear combination of $\{x_i\}$ is that the enlarged set, obtained by adjoining $x$ to $\{x_i\}$, be linearly dependent.
+\end{remark}
+\begin{proof}
+%Since the statement obviously holds if $x=0$, we only consider the case $x\ne 0$.
+Suppose $x = \sum_i\alpha_i x_i$.
+Then $\sum_i(-\alpha_i) x_i + x = 0$, hence $\{x_i\}\cup \{x\}$ is dependent.
+Next, suppose $\{x_i\}\cup \{x\}$ is dependent.
+Then there exist a set $\{\alpha_i\}\cup\{\beta\}$ of scalars (not all zero) such that $\sum_i\alpha_i x_i + \beta x = 0$.
+By the independence of $\{x_i\}$, $\beta = 0$ implies that $\alpha_i = 0$ for all $i$, a contradiction.
+Hence $\beta \ne 0$ and we obtain $x = \sum_i (-\alpha_i/\beta)x_i$.
+\end{proof}
 
 \begin{thebibliography}{9}
 \bibitem{Q_countable} \url{https://proofwiki.org/wiki/Rational_Numbers_are_Countably_Infinite}
