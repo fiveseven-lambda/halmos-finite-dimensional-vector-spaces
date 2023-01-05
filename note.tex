@@ -476,9 +476,21 @@ We can prove this in a similar way as in Exercise 7.1(a).
 
 \section{Mohehe (2022/1/02)}
 \subsection{Exercise 7.2}
-Suppose when $\xi$ be rational, vectors $1$ and $\xi\in\R$ be linearly independent.
-Let $\alpha\ne0\in\R$, then $\alpha\xi \in\R$.
-$-\alpha\xi\cdot1+\alpha\cdot\xi=0$ so vectors $1$ and $\xi$ be linearly dependent. It is contradicted to supposition, so $\xi$ needs to be irrational.
+$\xi\in\R$ so $\xi$ is real number. Let $\alpha,\beta\ne0$ and are rational.
+\begin{enumerate}
+\item Proof : If $1 \text{ and } \xi$ are linearly independent, $\xi$ is irrational.
+
+If $1 \text{ and } \xi$ are linearly independent,
+suppose $\xi$ is not irrational. In other words, $\xi$ is rational.
+When $\xi=-\dfrac{\alpha}{\beta}$, we have $\alpha\cdot1+\beta\cdot\xi=0$.
+However, this is contradicted to the condition that $1 \text{ and } \xi$ are linearly independent. Therefore, if $1 \text{ and } \xi$ are linearly independent, $\xi$ is irrational.
+\item Proof : If $\xi$ is irrational, $1 \text{ and } \xi$ are linearly independent.
+
+If $\xi$ is irrational,
+suppose $1 \text{ and } \xi$ are linearly dependent.
+By it, for $\alpha,\beta$, we have $\alpha\cdot1+\beta\cdot\xi=0 \iff \xi=-\dfrac{\alpha}{\beta}$. This means $\xi$ is rational. However this is contradicted to the condition that $\xi$ is irrational. Therefore, if $\xi$ is irrational, $1 \text{ and } \xi$ are linearly independent.
+\end{enumerate}
+In conclusion, a necessary and sufficient condition that the vcectors 1 and $\xi$ in $\R$ be linearly independent is that the real number $\xi$ be irrational.
 \subsection{Exercise 7.3}
 Let $\alpha,\beta, \text{ and }\gamma$ are scalars.
 $\alpha(x+y)+\beta(y+z)+\gamma(z+x)=0 \iff (\gamma+\alpha)x+(\alpha+\beta)y+(\beta+\gamma)z=0 \iff \gamma+\alpha=\alpha+\beta=\beta+\gamma=0$ because $x,y,\text{ and }z$ are linearly independent. In addition, $\gamma+\alpha=\alpha+\beta=\beta+\gamma=0 \iff \alpha=\beta=\gamma=0$ so $x+y,y+x,\text{ and }z+x$ are linearly independent.
